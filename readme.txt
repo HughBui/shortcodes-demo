@@ -29,6 +29,7 @@ div {
 	position: relative;
 	overflow: hidden;
 	color: red;
+	background: rgba(255,255,255,0.7); 
 }
 
 div>svg {
@@ -59,3 +60,51 @@ div>svg {
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+.col.top-left * {
+	text-align: left;
+	margin: 0 auto auto 0;
+}
+
+.col.top-center * {
+	margin: 0 auto auto auto;
+}
+
+.col.top-right * {
+	text-align: right;
+	margin: 0 0 auto auto;
+}
+
+.col.middle-left * {
+	text-align: left;
+	margin: auto auto;
+}
+
+.col.middle-center * {
+	margin: auto auto;
+}
+
+.col.middle-right * {
+	text-align: right;
+	margin: auto auto;
+}
+
+.col.bottom-left * {
+	text-align: left;
+	margin: auto auto 0 0;
+}
+
+.col.bottom-center * {
+	margin: auto auto 0 auto;
+}
+
+.col.bottom-right * {
+	text-align: right;
+	margin: auto 0 0 auto;
+}
+
