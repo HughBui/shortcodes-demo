@@ -1,0 +1,177 @@
+/* CSS Document */
+
+/*Strip the ul of padding and list styling*/
+.header ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+
+.sticky > ul{
+   position: absolute;
+   top: 0;
+   right: 20px;
+}
+
+/*Create a horizontal list with spacing*/
+.header li {
+    display:inline-block;
+    float: left;
+    /*margin-right: 1px;*/
+}
+
+/*Style for menu links*/
+.header li a {
+    display:block;
+    min-width:120px;
+    height: 76px;
+    text-align: center;
+    line-height: 76px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+/*Hover state for top level links*/
+.header li:hover a {
+    border-top: 4px solid #5d5b5c; 
+}
+
+/*Submenu when small*/
+.header li:hover ul a {
+    background-color:rgba(255, 255, 255, 0.5);
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+    border: none; 
+}
+
+/*Hover state for dropdown links*/
+
+/*Hide dropdown links until they are needed*/
+.header li ul {
+    display: none; 
+}
+
+/*Make dropdown links vertical*/
+.header li ul li {
+    display: block;
+    float: none;
+}
+
+/*Prevent text wrapping*/
+.header li ul li a {
+    width: auto;
+    min-width: 140px;
+    /*padding: 0 20px;*/
+    text-align:left;
+}
+
+/*Display the dropdown on hover*/
+.header ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.header .show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    /*background: #19c589;*/
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/*Hide checkbox*/ 
+input[type=checkbox]{
+    display: none;
+}
+/* Show menu when invisible checkbox is checked */
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*Responsive Styles*/
+@media(max-width:1200px) {
+    .header li a {
+        min-width: 99px;
+    }
+}
+
+@media(max-width:1050px) {
+    .header li a {
+        min-width: 80px;
+        font-size: 16px;
+        height: 66px;
+        line-height: 66px;
+    }
+}
+
+@media(max-width:900px) {
+    .header li a {
+        height: 61px;
+        line-height: 61px;
+    }
+}
+
+@media(max-width:860px) {
+    .header li a {
+        font-size: 15px;
+        height: 51px;
+        line-height: 51px;
+    }
+}
+
+@media(max-width:790px) {
+    .header li a {
+        font-size: 14px;
+        min-width: 75px;
+    }
+}
+
+
+@media screen and (max-width : 750px){
+    /*Make dropdown links appear inline*/
+    .header ul {
+        position: static;   
+        display: none;      
+    }
+    /*Create vertical spacing*/
+    .header li {
+        margin-bottom: 2px;
+    }
+
+    .header li a{
+        height: 40px;
+        line-height: 40px;
+        background-color:rgba(255, 255, 255, 0.9);
+    }
+    .header li a:hover{
+        background-color:rgba(255, 255, 255, 1);
+    }
+    .header li:hover a {
+        background-color:rgba(255, 255, 255, 1);
+    }
+    .header li:hover ul a {
+        background-color:rgba(255, 255, 255, 1);
+    }
+    /*Make all menu links full width*/
+    .header ul li, li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    .header .show-menu {
+        display:block;
+    }
+    /*Pointer on Hover, so that the user knows of an active link*/
+    .header .show-menu:hover {
+        cursor:pointer;
+    }
+    /*Center the text*/
+    .header li ul li a {
+        text-align:center;
+    }
+}
