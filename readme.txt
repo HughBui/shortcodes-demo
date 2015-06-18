@@ -26,7 +26,7 @@ https://projects.invisionapp.com/share/KE329258C#/screens/77917300?maintainScrol
 				<h1>aasdasdas asd asdas </h1>
 				<p>a asdasd asdsad asdasd as</p>
 				<p>a asdasd asdsad asdasd as</p>
-				<span style="margin-bottom:-50px; margin-top: 70px;">
+				<span style="position:relative; bottom: -50px; top: 50px;">
 					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('0')">
 					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="white" />
 					</svg>
