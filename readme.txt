@@ -10,12 +10,12 @@ https://projects.invisionapp.com/share/KE329258C#/screens/77917300?maintainScrol
 
 		var dots = document.getElementsByTagName("circle");
 		for(var i = 0; i < dots.length; i++){
-			dots[i].setAttribute("fill", (i == index ? "grey" : "white"));
+			dots[i].setAttribute("fill", (i == index ? "white" : "rgba(240,240,240, 0.3)"));
 		}
 		return true;
 	}
 	
-	<div id="bgDiv" class="container content header bgDiv" style="background: url('static/banner_images/home_header.jpg') no-repeat;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-position: center center;">
+<div id="bgDiv" class="container content header bgDiv" style="background: url('static/banner_images/home_header.jpg') no-repeat;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-position: center center;">
 		<input type="hidden" class="bannerImage" value="static/banner_images/home_header.jpg"/>
 		<input type="hidden" class="bannerImage" value="static/banner_images/about_header.jpg"/>
 		<input type="hidden" class="bannerImage" value="static/banner_images/contact_header.jpg"/>
@@ -23,19 +23,21 @@ https://projects.invisionapp.com/share/KE329258C#/screens/77917300?maintainScrol
 		<div class="row narrow">
 			<div class="col col-span-1 middle-left" style="width:100%;">
 				<h1>aasdasdas asd asdas </h1>
+				<h1>aasdasdas asd asdas </h1>
 				<p>a asdasd asdsad asdasd as</p>
-				<span>
-					<svg height="12" width="12" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('0')">
-					  <circle cx="6" cy="6" r="5" stroke="grey" stroke-width="1" fill="grey" />
+				<p>a asdasd asdsad asdasd as</p>
+				<span style="margin-bottom:-50px; margin-top: 70px;">
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('0')">
+					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="white" />
 					</svg>
-					<svg height="12" width="12" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('1')">
-					  <circle cx="6" cy="6" r="5" stroke="grey" stroke-width="1" fill="white" />
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('1')">
+					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="rgba(240,240,240, 0.3)" />
 					</svg>
-					<svg height="12" width="12" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('2')">
-					  <circle cx="6" cy="6" r="5" stroke="grey" stroke-width="1" fill="white" />
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('2')">
+					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="rgba(240,240,240, 0.3)" />
 					</svg>
-					<svg height="12" width="12" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('3')">
-					  <circle cx="6" cy="6" r="5" stroke="grey" stroke-width="1" fill="white" />
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage('3')">
+					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="rgba(240,240,240, 0.3)" />
 					</svg>
 				</span> 
 			</div>
