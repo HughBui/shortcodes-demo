@@ -4,10 +4,10 @@ https://projects.invisionapp.com/share/KE329258C#/screens/77916770?maintainScrol
 https://projects.invisionapp.com/share/KE329258C#/screens/77917300?maintainScrollPosition=false
 
 
-	function changeBannerImage(node){
+	function changeHeaderImage(node){
 		for (var i = 0; (node = node.previousSibling); i++);
 		var index = i/4 - 0.75;
-		var bannerImg = document.getElementsByClassName("bannerImage");
+		var bannerImg = document.getElementsByClassName("headerImage");
 		document.getElementById("bgDiv").style.backgroundImage = "url('"+ bannerImg[index].value +"')";
 
 		var dots = document.getElementsByTagName("circle");
@@ -26,20 +26,20 @@ https://projects.invisionapp.com/share/KE329258C#/screens/77917300?maintainScrol
 				<p>a asdasd asdsad asdasd as</p>
 				<p>a asdasd asdsad asdasd as</p>
 				<span style="position:relative; bottom: -50px; top: 50px;">
-					<input type="hidden" class="bannerImage" value="static/banner_images/home_header.jpg"/>
-					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage(this)">
+					<input type="hidden" class="headerImage" value="static/banner_images/home_header.jpg"/>
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeHeaderImage(this)">
 					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="white" />
 					</svg>
-					<input type="hidden" class="bannerImage" value="static/banner_images/about_header.jpg"/>
-					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage(this)">
+					<input type="hidden" class="headerImage" value="static/banner_images/about_header.jpg"/>
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeHeaderImage(this)">
 					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="rgba(240,240,240, 0.3)" />
 					</svg>
-					<input type="hidden" class="bannerImage" value="static/banner_images/contact_header.jpg"/>
-					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage(this)">
+					<input type="hidden" class="headerImage" value="static/banner_images/contact_header.jpg"/>
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeHeaderImage(this)">
 					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="rgba(240,240,240, 0.3)" />
 					</svg>
-					<input type="hidden" class="bannerImage" value="static/banner_images/projects_header.jpg"/>
-					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeBannerImage(this)">
+					<input type="hidden" class="headerImage" value="static/banner_images/projects_header.jpg"/>
+					<svg height="40" width="40" style="z-index: 2; cursor: pointer;" onclick="return changeHeaderImage(this)">
 					  <circle cx="20" cy="20" r="10" stroke="grey" stroke-width="1" fill="rgba(240,240,240, 0.3)" />
 					</svg>
 				</span> 
