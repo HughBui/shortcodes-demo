@@ -1,0 +1,79 @@
+#taphouseFading {
+	position:absolute;
+	bottom:0; right:0%;
+	height: 70px;
+	width: 100%;
+	margin: 0 auto;
+	background:red;
+	-moz-animation: taphouseShowHide 4s alternate; /* Firefox */
+	-webkit-animation: taphouseShowHide 4s alternate; /* Safari and Chrome */
+	-ms-animation: taphouseShowHide 4s alternate; /* IE10 */
+	-o-animation: taphouseShowHide 4s alternate; /* Opera */
+	animation: taphouseShowHide 4s alternate;
+}
+@-webkit-keyframes taphouseShowHide { /* Chrome, Safari */
+	0% {width:0%}
+	75% {width:0%}
+	100% {width:100%;}
+}
+@-moz-keyframes taphouseShowHide { /* FF */
+	0% {width:0%}
+	75% {width:0%}
+	100% {width:100%;}
+}
+@-ms-keyframes taphouseShowHide { /* IE10 */
+	0% {width:0%}
+	75% {width:0%}
+	100% {width:100%;}
+}
+@-o-keyframes taphouseShowHide { /* Opera */
+	0% {width:0%}
+	75% {width:0%}
+	100% {width:100%;}
+}
+@keyframes taphouseShowHide {
+	0% {width:0%}
+	75% {width:0%}
+	100% {width:100%;}
+}
+
+#menuFading {
+	position:absolute;
+	bottom:0; right:0%;
+	height: 70px;
+	width: 0%;
+	background:blue;
+	z-index: 2;
+	-moz-animation: menuShowHide 0.5s alternate; /* Firefox */
+	-webkit-animation: menuShowHide 0.5s alternate; /* Safari and Chrome */
+	-ms-animation: menuShowHide 0.5s alternate; /* IE10 */
+	-o-animation: menuShowHide 0.5s alternate; /* Opera */
+	animation: menuShowHide 0.5s alternate;
+}
+@-webkit-keyframes menuShowHide { /* Chrome, Safari */
+	0% {width:100%}
+	100% {width:0%;}
+}
+@-moz-keyframes menuShowHide { /* FF */
+	0% {width:100%}
+	100% {width:0%;}
+}
+@-ms-keyframes menuShowHide { /* IE10 */
+	0% {width:100%}
+	100% {width:0%;}
+}
+@-o-keyframes menuShowHide { /* Opera */
+	0% {width:100%}
+	100% {width:0%;}
+}
+@keyframes menuShowHide {
+	0% {width:100%}
+	100% {width:0%;}
+}
+
+#burger,
+#menu{
+	/*margin-top:-41px;*/
+	z-index: 1;
+	display: none;
+}

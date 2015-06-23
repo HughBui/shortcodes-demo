@@ -1,0 +1,392 @@
+
+@font-face {
+	font-family: Cabin-Bold;
+	src: url(./static/Cabin-Bold.otf) format("opentype");
+}
+@font-face {
+	font-family: Cabin-Bold;
+	src: url(./static/Cabin-Bold.eot);
+}
+@font-face {
+	font-family: Cabin-Medium;
+	src: url(./static/Cabin-Medium.otf) format("opentype");
+}
+@font-face {
+	font-family: Cabin-Medium;
+	src: url(./static/Cabin-Medium.eot);
+}
+@font-face {
+	font-family: norwester;
+	src: url(./static/norwester.otf) format("opentype");
+}
+@font-face {
+	font-family: norwester;
+	src: url(./static/norwester.eot);
+}
+
+html, body {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	max-width: 1400px;
+	background: url('./static/pattern.png');
+}
+
+.container{
+	width: 100%;
+}
+
+.container h1, h2, h3{
+	color: #000;
+	font-family: norwester;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 2px;
+	 font-weight: lighter;
+}
+
+.container p{
+	width: 100%;
+	color: #000;
+	font-family: Cabin-Medium;
+	font-size: 20px;
+	text-align: center;
+}
+
+.container p.small,
+.container a{
+	color: #6b6b6b;
+	font-family: Cabin-Medium;
+	font-size: 17px;
+	font-weight: lighter;
+	line-height: 25px;
+	text-align: center;
+	margin: 3px;
+}
+
+.container p.big,
+.container p.bigger{
+	color: #555555;
+	font-family: norwester;
+	font-size: 25px;
+	/*font-weight: bolder;*/
+	text-align: center;
+	margin: 3px;
+	letter-spacing: 3px;
+}
+
+.container p.bigger{
+	font-size: 30px;
+}
+
+#logoSmall{
+	display: none;
+}
+
+.white{
+	color:#fff !important;
+}
+
+.container a{
+	text-decoration: none;
+	color: #555555;
+	font-size: 18px;
+}
+
+.container a img{
+	border: 0;
+}
+
+.content{
+	background: white;
+	padding: 50px 0;
+}
+
+.dark{
+	background: #f7f7f7;
+}
+
+.invert{
+	background: #000;
+}
+
+.invert *{
+	color: #fff !important;
+}
+
+
+
+
+
+.header{
+	height: 220px;
+}
+
+.headerScroll{
+	height: 50px;
+}
+
+.header,
+.headerScroll{
+	max-width: 1400px;
+	background: #fff;
+	position: fixed;
+	z-index:2;
+}
+
+.header .row,
+.headerScroll .row{
+	margin: 40px auto 0 auto;
+}
+
+.header ul{
+	margin-left: -30px;
+}
+
+.headerScroll ul{
+	height: 50px; 
+	line-height: 50px;
+	padding: 0;
+}
+
+.header ul *,
+.headerScroll ul *{
+	color: #000;
+	font-family: norwester;
+	font-size: 22px;
+	list-style: none;
+	float: left;
+
+}
+
+.header ul li{
+	float: left;
+	line-height: 18px;
+
+}
+
+.headerScroll ul li{
+	height: 50px;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.header ul li a,
+.headerScroll ul li a{
+	padding: 0 15px;
+	margin: auto 0 auto 0;
+}
+
+.headerScroll ul li a{
+	margin-top: 15px;
+}
+
+.header ul li:not(:first-child) a,
+.headerScroll ul li:not(:first-child) a{
+	border-left: 2px solid; 
+	/*margin-left: 30px;*/
+	/*padding-left: 30px;*/
+}
+
+.headerScroll #logo{
+	display: none;
+}
+
+.headerScroll #logoSmall{
+	display: inline;
+	position: absolute;
+	text-align: left;
+	margin: -40px 20px auto 0;
+	left: 20px;
+	z-index: 5;
+}
+
+.headerScroll #taphouse, 
+.headerScroll #menu{
+	text-align: right;
+	margin: -48px 20px auto auto;
+}
+
+#menu,
+#taphouse{
+	letter-spacing: 3px;
+}
+
+.headerScroll #burger{
+	display: none;
+	cursor: pointer;
+	margin: -30px 20px auto auto;
+}
+
+.headerScroll ul *{
+	font-size: 20px;
+}
+
+.headerScroll ul li:not(:first-child) {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+.headerScroll .row {
+	width: 100% !important;
+}
+
+.headerScroll .selected {
+	background: black;
+}
+
+.headerScroll .selected a{
+	color: white;
+	border: none !important;
+}
+
+.headerScroll .selected + li a{
+	border: none !important;
+}
+
+
+
+
+
+.arrowBtn{
+	position:absolute; 
+	cursor:pointer;
+	display: none;
+}
+
+.arrowBtn.left{
+	left: 10%; 
+}
+
+.arrowBtn.right{
+	right: 10%; 
+}
+
+.bannerImg{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.normalImg{
+	width: 100%;
+}
+
+.bgDiv{
+	overflow: hidden;
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+	margin: 10px !important;
+}
+
+hr.black {
+	width: 30%;
+	border: 0;
+	border-top: 3px solid #000;
+	margin: 50px 0;
+}
+
+hr.thin {
+	width: 100%;
+	border: 0;
+	border-top: 1px solid #000;
+	margin: 50px 0;
+}
+
+hr.white {
+	width: 30%;
+	border: 0;
+	border-top: 1px solid #fff;
+	margin: 50px 0;
+}
+
+a.btn{
+	float: left;
+	width: 150px;
+	padding: 10px 0;
+	text-align: center;
+	border: 3px solid #000;
+	color: #000;
+	font-family: norwester;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+.footer{
+	background: #000;
+	overflow: hidden;
+	color: #fff;
+	font-family: Cabin-Medium;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.footer .row{
+	width: 100%;
+	text-align: center;
+}
+
+.footer .row img{
+	-webkit-filter: invert(100%);
+	filter: invert(100%);
+}
+
+.footer h3{
+	color: #fff;
+	font-family: norwester;
+}
+
+.footer .copyright{
+	margin-left: 5%;
+}
+
+.container h2.menuTitle{
+	text-align: left !important;
+	padding-top: 50px;
+	margin-left: 25px;
+	font-size: 28px;
+	letter-spacing: 3px;
+}
+
+.row.menu p{
+	font-weight: bolder;
+	letter-spacing: 3px;
+	font-size: 23px;
+}
+
+.row.menu p.small{
+	font-weight: lighter;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+.row.menu > div{
+	margin: 20px;
+}
+
+.reservation{
+	letter-spacing: 3px;
+}
+
+.reservation h1, h2, h3{
+	font-weight: lighter;
+}
+
+.col.no-padding *{
+	text-align: left !important;
+}
+
+.col.no-padding p{
+	padding: 0;
+	margin: 0;
+}
+
+.col.no-padding .price{
+	text-align: right !important;
+}
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+/*Responsive Styles*/
+@media screen and (min-width : 750px){
+    #burger{
+        display: none;
+    }
+}
+@media screen and (max-width : 750px){
+    #burger{
+        display: inline;
+    }
+
+    .headerScroll #menu{
+        width: 250px;
+        margin: 20px 20px auto auto;
+    }
+
+    .headerScroll #menu li{
+        width: 250px;
+        background: white;  
+    }
+
+    .headerScroll #menu li a{
+        border: none;
+    }
+
+    .headerScroll #menu .selected {
+        background: black;
+    }
+}
