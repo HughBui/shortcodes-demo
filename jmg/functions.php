@@ -4,6 +4,16 @@ function get_static_uri($resource){
   return get_template_directory_uri() . '/static/' . $resource;
 }
 
+function catch_that_image() {
+  global $post, $posts;
+  
+   $pattern = '#[image](.*?)[/image]#';
+    preg_match($pattern, $post->post_content, $matches);
+    
+  
+  return $matches[1];
+}
+
 add_shortcode('bannerImage', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'type' => '1'
