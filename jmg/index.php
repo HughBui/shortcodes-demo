@@ -9,12 +9,19 @@
 
 <?php get_header(); ?>
 
- <!-- Page Content -->
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-    the_content();
-  endwhile; else: ?>
-    <p><?php _e('Sorry, page not found') ?><p>
-  <?php endif; ?>
-  <!-- End Page Content -->
+
+<?php query_posts( array( 'posts_per_page' => 3 ) ); ?>
+
+
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
+
+<h1 class="post-heading"><?php the_title(); ?></h1>
+
+<div class="content"><?php the_excerpt(); ?></div>
+
+<a href="<?php the_permalink(); ?>">Read More</a>
+
+<?php endwhile; endif; ?>
+
 
 <?php get_footer(); ?>
