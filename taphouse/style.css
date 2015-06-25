@@ -1,0 +1,722 @@
+/* */
+/*Theme Name: Taphouse */
+/*Author: Gramercy Studios */
+/*Author URI: http://www.gramercystudios.com/ */
+/*Version: 1.0 */
+/* -------------------------------------------------------------- */
+/* line 61, ../src/css/_grid.sass */
+.row {
+  margin-top: 0.5rem;
+  width: 90%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+/* line 68, ../src/css/_grid.sass */
+.row .row {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: -0.5em;
+}
+/* line 72, ../src/css/_grid.sass */
+.row.menu {
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+}
+/* line 74, ../src/css/_grid.sass */
+.row.narrow {
+  width: 70%;
+}
+/* line 76, ../src/css/_grid.sass */
+.row.nested {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: -0.5em;
+}
+/* line 79, ../src/css/_grid.sass */
+.row.wide-fit {
+  width: 100%;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* line 84, ../src/css/_grid.sass */
+.col {
+  -ms-flex: 1 1 8%;
+  -webkit-flex: 1 1 8%;
+  flex: 1 1 8%;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5em 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+}
+
+/* line 93, ../src/css/_grid.sass */
+.col-span-1 {
+  flex-basis: 8.3333%;
+  -ms-flex-preferred-size: 8.3333%;
+}
+
+/* line 96, ../src/css/_grid.sass */
+.col-span-2 {
+  flex-basis: 16.6666%;
+  -ms-flex-preferred-size: 16.6666%;
+}
+
+/* line 99, ../src/css/_grid.sass */
+.col-span-3 {
+  flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+}
+
+/* line 102, ../src/css/_grid.sass */
+.col-span-4 {
+  flex-basis: 33.3333%;
+  -ms-flex-preferred-size: 33.3333%;
+}
+
+/* line 105, ../src/css/_grid.sass */
+.col-span-5 {
+  flex-basis: 41.6666%;
+  -ms-flex-preferred-size: 41.6666%;
+}
+
+/* line 108, ../src/css/_grid.sass */
+.col-span-6 {
+  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+}
+
+/* line 111, ../src/css/_grid.sass */
+.col-span-7 {
+  flex-basis: 58.3333%;
+  -ms-flex-preferred-size: 58.3333%;
+}
+
+/* line 114, ../src/css/_grid.sass */
+.col-span-8 {
+  flex-basis: 66.6666%;
+  -ms-flex-preferred-size: 66.6666%;
+}
+
+/* line 117, ../src/css/_grid.sass */
+.col-span-9 {
+  flex-basis: 75%;
+  -ms-flex-preferred-size: 75%;
+}
+
+/* line 120, ../src/css/_grid.sass */
+.col-span-10 {
+  flex-basis: 83.3333%;
+  -ms-flex-preferred-size: 83.3333%;
+}
+
+/* line 123, ../src/css/_grid.sass */
+.col-span-11 {
+  flex-basis: 91.6666%;
+  -ms-flex-preferred-size: 91.6666%;
+}
+
+/* line 126, ../src/css/_grid.sass */
+.col-span-12 {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+}
+
+@media all and (max-width: 568px) {
+  /* line 130, ../src/css/_grid.sass */
+  .col-span-1 {
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+  }
+
+  /* line 133, ../src/css/_grid.sass */
+  .col-span-2 {
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+  }
+
+  /* line 136, ../src/css/_grid.sass */
+  .col-span-3 {
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+  }
+
+  /* line 139, ../src/css/_grid.sass */
+  .col-span-4 {
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+  }
+
+  /* line 142, ../src/css/_grid.sass */
+  .col-span-5 {
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+  }
+
+  /* line 145, ../src/css/_grid.sass */
+  .col-span-6 {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  /* line 148, ../src/css/_grid.sass */
+  .col-span-7 {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  /* line 151, ../src/css/_grid.sass */
+  .col-span-8 {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  /* line 154, ../src/css/_grid.sass */
+  .col-span-9 {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  /* line 157, ../src/css/_grid.sass */
+  .col-span-10 {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  /* line 160, ../src/css/_grid.sass */
+  .col-span-11 {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+
+  /* line 163, ../src/css/_grid.sass */
+  .nested .col {
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+  }
+}
+/* line 166, ../src/css/_grid.sass */
+.center .col {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* line 36, ../src/css/style.sass */
+.container h1, h2, h3 {
+  color: #000;
+  font-family: norwester;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+/* line 47, ../src/css/style.sass */
+.container p.small, .container a {
+  color: #6b6b6b;
+  font-family: Cabin-Medium;
+  font-size: 17px;
+  font-weight: lighter;
+  line-height: 25px;
+  text-align: center;
+  margin: 3px;
+}
+
+/* line 59, ../src/css/style.sass */
+.container p.big, .container p.bigger {
+  color: #555555;
+  font-family: norwester;
+  font-size: 25px;
+  text-align: center;
+  margin: 3px;
+  letter-spacing: 3px;
+}
+
+/* line 70, ../src/css/style.sass */
+.header, .headerScroll {
+  max-width: 1400px;
+  background: #fff;
+  position: fixed;
+  z-index: 2;
+}
+
+/* line 79, ../src/css/style.sass */
+.header ul *, .headerScroll ul * {
+  color: #000;
+  font-family: norwester;
+  font-size: 22px;
+  list-style: none;
+  float: left;
+}
+
+/* line 86, ../src/css/style.sass */
+html, body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  max-width: 1400px;
+  background: url(./static/pattern.png);
+}
+
+@font-face {
+  font-family: Cabin-Bold;
+  src: url(./static/fonts/Cabin-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: Cabin-Bold;
+  src: url(./static/fonts/Cabin-Bold.eot);
+}
+@font-face {
+  font-family: Cabin-Medium;
+  src: url(./static/fonts/Cabin-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: Cabin-Medium;
+  src: url(./static/fonts/Cabin-Medium.eot);
+}
+@font-face {
+  font-family: norwester;
+  src: url(./static/fonts/norwester.otf) format("opentype");
+}
+@font-face {
+  font-family: norwester;
+  src: url(./static/fonts/norwester.eot);
+}
+/* line 130, ../src/css/style.sass */
+.container {
+  width: 100%;
+}
+/* line 135, ../src/css/style.sass */
+.container p {
+  width: 100%;
+  color: #000;
+  font-family: Cabin-Medium;
+  font-size: 20px;
+  text-align: center;
+}
+/* line 147, ../src/css/style.sass */
+.container p.bigger {
+  font-size: 30px;
+}
+/* line 152, ../src/css/style.sass */
+.container a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 18px;
+}
+/* line 157, ../src/css/style.sass */
+.container a img {
+  border: 0;
+}
+/* line 161, ../src/css/style.sass */
+.container h2.menuTitle {
+  text-align: left !important;
+  padding-top: 50px;
+  margin-left: 25px;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+/* line 169, ../src/css/style.sass */
+.row.menu p {
+  font-weight: bolder;
+  letter-spacing: 3px;
+  font-size: 23px;
+}
+/* line 173, ../src/css/style.sass */
+.row.menu p.small {
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+/* line 177, ../src/css/style.sass */
+.row.menu > div {
+  margin: 20px;
+}
+
+/* line 180, ../src/css/style.sass */
+.reservation {
+  letter-spacing: 3px;
+}
+/* line 182, ../src/css/style.sass */
+.reservation h1 {
+  font-weight: lighter;
+}
+/* line 184, ../src/css/style.sass */
+.reservation h2 {
+  font-weight: lighter;
+}
+/* line 186, ../src/css/style.sass */
+.reservation h3 {
+  font-weight: lighter;
+}
+
+/* line 196, ../src/css/style.sass */
+#logoSmall {
+  display: none;
+}
+
+/* line 199, ../src/css/style.sass */
+.white {
+  color: #fff !important;
+}
+
+/* line 202, ../src/css/style.sass */
+.content {
+  background: #fff;
+  padding: 50px 0;
+}
+
+/* line 206, ../src/css/style.sass */
+.dark {
+  background: #f7f7f7;
+}
+
+/* line 209, ../src/css/style.sass */
+.invert {
+  background: #000;
+}
+/* line 211, ../src/css/style.sass */
+.invert * {
+  color: #fff !important;
+}
+
+/* line 215, ../src/css/style.sass */
+.header {
+  height: 220px;
+}
+/* line 218, ../src/css/style.sass */
+.header .row {
+  margin: 40px auto 0 auto;
+}
+/* line 221, ../src/css/style.sass */
+.header ul {
+  margin-left: -30px;
+}
+/* line 226, ../src/css/style.sass */
+.header ul li {
+  float: left;
+  line-height: 18px;
+}
+/* line 229, ../src/css/style.sass */
+.header ul li a {
+  padding: 0 15px;
+  margin: auto 0 auto 0;
+  color: #000;
+  font-size: 23px;
+}
+/* line 235, ../src/css/style.sass */
+.header ul li:not(:first-child) a {
+  border-left: 2px solid;
+}
+
+/* line 241, ../src/css/style.sass */
+.headerScroll {
+  height: 50px;
+}
+/* line 244, ../src/css/style.sass */
+.headerScroll .row {
+  margin: 40px auto 0 auto;
+  width: 100% !important;
+}
+/* line 248, ../src/css/style.sass */
+.headerScroll ul {
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+/* line 252, ../src/css/style.sass */
+.headerScroll ul * {
+  font-size: 20px;
+}
+/* line 256, ../src/css/style.sass */
+.headerScroll ul li {
+  height: 50px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* line 260, ../src/css/style.sass */
+.headerScroll ul li a {
+  padding: 0 15px;
+  margin: auto 0 auto 0;
+  margin-top: 15px;
+  color: #000;
+}
+/* line 266, ../src/css/style.sass */
+.headerScroll ul li:not(:first-child) {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+/* line 269, ../src/css/style.sass */
+.headerScroll ul li:not(:first-child) a {
+  border-left: 2px solid;
+}
+/* line 275, ../src/css/style.sass */
+.headerScroll #logo {
+  display: none;
+}
+/* line 278, ../src/css/style.sass */
+.headerScroll #logoSmall {
+  display: inline;
+  position: absolute;
+  text-align: left;
+  margin: -40px 20px auto 0;
+  left: 20px;
+  z-index: 5;
+}
+/* line 286, ../src/css/style.sass */
+.headerScroll #taphouse {
+  text-align: right;
+  margin: -48px 20px auto auto;
+}
+/* line 290, ../src/css/style.sass */
+.headerScroll #menu {
+  text-align: right;
+  margin: -48px 20px auto auto;
+}
+/* line 294, ../src/css/style.sass */
+.headerScroll #burger {
+  display: none;
+  cursor: pointer;
+  margin: -30px 20px auto auto;
+}
+/* line 299, ../src/css/style.sass */
+.headerScroll .selected {
+  background: #000;
+}
+/* line 301, ../src/css/style.sass */
+.headerScroll .selected a {
+  color: #fff;
+  border: none !important;
+}
+/* line 305, ../src/css/style.sass */
+.headerScroll .selected + li a {
+  border: none !important;
+}
+
+/* line 308, ../src/css/style.sass */
+#menu {
+  letter-spacing: 3px;
+}
+
+/* line 311, ../src/css/style.sass */
+#taphouse {
+  letter-spacing: 3px;
+}
+
+/* line 314, ../src/css/style.sass */
+#taphouse li {
+  font-family: Georgia, Times, "Times New Roman", serif !important;
+}
+
+/* line 317, ../src/css/style.sass */
+.arrowBtn {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+/* line 321, ../src/css/style.sass */
+.arrowBtn.left {
+  left: 10%;
+}
+/* line 324, ../src/css/style.sass */
+.arrowBtn.right {
+  right: 10%;
+}
+
+/* line 328, ../src/css/style.sass */
+.bannerImg {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* line 332, ../src/css/style.sass */
+.normalImg {
+  width: 100%;
+}
+
+/* line 335, ../src/css/style.sass */
+.bgDiv {
+  overflow: hidden;
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
+  margin: 10px !important;
+}
+
+/* line 342, ../src/css/style.sass */
+hr.black {
+  width: 30%;
+  border: 0;
+  border-top: 3px solid #000;
+  margin: 50px 0;
+}
+/* line 348, ../src/css/style.sass */
+hr.thin {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 50px 0;
+}
+/* line 354, ../src/css/style.sass */
+hr.white {
+  width: 30%;
+  border: 0;
+  border-top: 1px solid #fff;
+  margin: 50px 0;
+}
+
+/* line 361, ../src/css/style.sass */
+.footer {
+  background: #000;
+  overflow: hidden;
+  color: #fff;
+  font-family: Cabin-Medium;
+  font-size: 18px;
+  line-height: 30px;
+}
+/* line 368, ../src/css/style.sass */
+.footer .row {
+  width: 100%;
+  text-align: center;
+}
+/* line 371, ../src/css/style.sass */
+.footer .row img {
+  filter: invert(100%);
+}
+/* line 375, ../src/css/style.sass */
+.footer h3 {
+  color: #fff;
+  font-family: norwester;
+}
+/* line 379, ../src/css/style.sass */
+.footer .copyright {
+  margin-left: 5%;
+}
+
+/* line 383, ../src/css/style.sass */
+a.btn {
+  float: left;
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  border: 3px solid #000;
+  color: #000;
+  font-family: norwester;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/* line 395, ../src/css/style.sass */
+.col.no-padding * {
+  text-align: left !important;
+}
+/* line 398, ../src/css/style.sass */
+.col.no-padding p {
+  padding: 0;
+  margin: 0;
+}
+/* line 402, ../src/css/style.sass */
+.col.no-padding .price {
+  text-align: right !important;
+}
+
+@media screen and (min-width: 750px) {
+  /* line 6, ../src/css/_menu.sass */
+  #burger {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 11, ../src/css/_menu.sass */
+  #burger {
+    display: inline;
+  }
+
+  /* line 14, ../src/css/_menu.sass */
+  .headerScroll #menu {
+    width: 250px;
+    margin: 20px 20px auto auto;
+  }
+  /* line 17, ../src/css/_menu.sass */
+  .headerScroll #menu li {
+    width: 250px;
+    background: white;
+  }
+  /* line 20, ../src/css/_menu.sass */
+  .headerScroll #menu li a {
+    border: none;
+  }
+  /* line 24, ../src/css/_menu.sass */
+  .headerScroll #menu .selected {
+    background: black;
+  }
+}
+@media(max-width:600px) {
+  /* line 2, ../src/css/_responsive.sass */
+  .header ul * {
+    font-size: 15px;
+  }
+}
+@media(max-width:500px) {
+  /* line 7, ../src/css/_responsive.sass */
+  .header ul li:not(:first-child) {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+@media(max-width:450px) {
+  /* line 14, ../src/css/_responsive.sass */
+  .header ul * {
+    font-size: 12px;
+  }
+  /* line 17, ../src/css/_responsive.sass */
+  .header ul li:not(:first-child) {
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+}
+/* line 4, ../src/css/_animation.sass */
+#taphouseFading {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 70px;
+  width: 0;
+  margin: 0 auto;
+  background: white;
+  z-index: 5;
+}
+
+/* line 14, ../src/css/_animation.sass */
+#burger {
+  z-index: 1;
+  display: none;
+}
+
+/* line 18, ../src/css/_animation.sass */
+#menu {
+  z-index: 1;
+  display: none;
+}
