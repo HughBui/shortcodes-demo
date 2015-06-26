@@ -7,11 +7,13 @@ function get_static_uri($resource){
 function catch_that_image() {
   global $post, $posts;
   
-   $pattern = '#[image](.*?)[/image]#';
-    preg_match($pattern, $post->post_content, $matches);
-    
-  
-  return $matches[1];
+  $content =  $post->post_content;
+  $findme1   = '[image]';
+	$findme2   = '[/image]';
+	$pos1 = strpos($content, $findme1);
+	$pos2 = strpos($content, $findme2);
+	
+	return get_static_uri(substr($content, $pos1 + strlen($findme1), $pos2 - $pos1 - strlen($findme1)));
 }
 
 add_shortcode('bannerImage', function($atts, $content) {
