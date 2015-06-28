@@ -3,7 +3,7 @@
 		<div class="col col-span-1">
 			<h3>CONTACT US</h3>
 			T+ 541 - 382 - 1454 <br/>
-			E+ <a href="mailto:info@whitewatertaphouse.com" style="color:white">info@whitewatertaphouse.com</a><br/>
+			<a href="mailto:info@whitewatertaphouse.com" style="color:white;">E+ info@whitewatertaphouse.com</a>
 			1043 NW Bond St, Bend <br/>
 			OR 97701
 		</div>

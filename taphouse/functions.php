@@ -1,5 +1,7 @@
 <?php
 
+show_admin_bar(false);
+
 function get_static_uri($resource){
   return get_template_directory_uri() . '/static/' . $resource;
 }
@@ -73,7 +75,10 @@ add_shortcode('image', function($atts, $content) {
 });
 
 add_shortcode('link', function($atts, $content) {
-	return '<a href="'.$atts["to"].'">'.$content.'</a>';
+	$a = shortcode_atts( array(
+		'style' => ''
+		), $atts );
+	return '<a style="'.$a["style"].'" href="'.$atts["to"].'">'.$content.'</a>';
 });
 
 add_shortcode('social', function($atts, $content) {

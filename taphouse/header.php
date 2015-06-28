@@ -1,7 +1,7 @@
 <?php get_template_part('head'); ?>
 <body>
 	<div class="container header">
-		<div class="row narrow">
+		<div class="row">
 		<?php get_template_part('menu'); ?>
 		</div>
 	</div>

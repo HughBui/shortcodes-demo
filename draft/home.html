@@ -27,10 +27,9 @@
 				<div id="taphouseFading"></div>
 				<img id="burger" src="static/hamburger_icon.png" onclick="toggleMenu()"/>
 				<ul id="menu">
-					<li class="selected"><a href="">TAPLIST</a></li>
-					<li><a href="">WINE & INFUSIONS</a></li>
-					<li><a href="">CONTACT</a></li>
-<!-- 					<div id="menuFading"></div> -->
+					<li class="menuItem"><a onmouseenter="enterItem(0)" onmouseout="leaveItem(0)" href="">TAPLIST</a></li>
+					<li class="menuItem"><a onmouseenter="enterItem(1)" onmouseout="leaveItem(1)" href="">WINE & INFUSIONS</a></li>
+					<li class="menuItem"><a onmouseenter="enterItem(2)" onmouseout="leaveItem(2)" href="">CONTACT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -94,7 +93,7 @@
 
 	<div class="container content grey">
 		<div class="row">
-			<div class="col col-span-1 bgDiv" style="background: url('static/3.PNG') no-repeat;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
+			<div class="col col-span-1 bgDiv" style="background: url('static/3.PNG') no-repeat;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; cursor: pointer;" onclick="location.href='http://www.google.com'">
 				<p class="bigger white">FRIDAY, MAY 5TH</p>
 				<hr class="white" />
 				<p class="white">WW Taphouse takeover<br/>Come drink beer with us!</p>
@@ -137,10 +136,10 @@
 </div>
 <div class="container footer">
 	<div class="row">
-		<div class="col col-span-1">
+		<div class="col col-span-1" style=" border: 1px solid red;">
 			<h3>CONTACT US</h3>
 			T+ 541 - 382 - 1454 <br/>
-			E+ info@whitewatertaphouse.com <br/>
+			<a href="mailto:info@whitewatertaphouse.com" style="color:white;">E+ info@whitewatertaphouse.com</a>
 			1043 NW Bond St, Bend <br/>
 			OR 97701
 		</div>
@@ -154,7 +153,7 @@
 		<div class="col col-span-1">
 			<h3>FOLLOW US</h3>
 			<div>
-				<img src="static/facebook.PNG"/>
+				<img src="static/facebook.PNG" style="cursor:pointer;" onclick="location.href='www.facebook.com/whitewatertaphouse'"/>
 				<img src="static/twitter.PNG"/>
 			</div>
 		</div>

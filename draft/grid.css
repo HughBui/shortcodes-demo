@@ -62,7 +62,8 @@
   align-items: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  /*border: 1px solid #000;*/
+ 
+  min-width: 200px;
 }
 
 /* line 91, ../src/css/_grid.sass */

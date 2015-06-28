@@ -1,3 +1,25 @@
+@media(max-width:650px) {
+  .headerScroll #logoSmall{
+        margin: -25px auto auto 20px;
+    }
+
+    .headerScroll #taphouse{
+        margin: -48px 20px auto auto;
+    }
+
+    .headerScroll #menu{
+        margin: 35px 20px auto auto;
+    }
+
+    .headerScroll #menu ul li{
+      background: grey !important;
+    }
+
+    .headerScroll #burger{
+        margin: -20px 20px auto auto;
+    }
+}
+
 @media(max-width:600px) {
   /* line 7, ../src/css/_responsive.sass */
   .header ul *{

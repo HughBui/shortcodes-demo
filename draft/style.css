@@ -30,6 +30,7 @@ html, body {
 	padding: 0;
 	height: 100%;
 	max-width: 1400px;
+	min-width: 200px;
 	background: url('./static/pattern.png');
 }
 
@@ -107,24 +108,13 @@ html, body {
 	background: #f7f7f7;
 }
 
-.invert{
-	background: #000;
-}
-
-.invert *{
-	color: #fff !important;
-}
-
-
-
-
 
 .header{
 	height: 220px;
 }
 
 .headerScroll{
-	height: 50px;
+	height: 80px;
 }
 
 .header,
@@ -141,12 +131,13 @@ html, body {
 }
 
 .header ul{
+	height: 50px;
 	margin-left: -30px;
 }
 
 .headerScroll ul{
-	height: 50px; 
-	line-height: 50px;
+	height: 80px; 
+	line-height: 80px;
 	padding: 0;
 }
 
@@ -161,25 +152,30 @@ html, body {
 }
 
 .header ul li{
+	height: 50px;
 	float: left;
 	line-height: 18px;
 
 }
 
 .headerScroll ul li{
-	height: 50px;
+	height: 80px;
 	margin: 0 !important;
 	padding: 0 !important;
 }
 
 .header ul li a,
 .headerScroll ul li a{
-	padding: 0 15px;
+	padding: 0 25px;
 	margin: auto 0 auto 0;
 }
 
+.header ul li a{
+	margin-top: 12px;
+}
+
 .headerScroll ul li a{
-	margin-top: 15px;
+	margin-top: 26px;
 }
 
 .header ul li:not(:first-child) a,
@@ -197,7 +193,7 @@ html, body {
 	display: inline;
 	position: absolute;
 	text-align: left;
-	margin: -40px 20px auto 0;
+	margin: -25px auto auto 80px;
 	left: 20px;
 	z-index: 5;
 }
@@ -205,7 +201,7 @@ html, body {
 .headerScroll #taphouse, 
 .headerScroll #menu{
 	text-align: right;
-	margin: -48px 20px auto auto;
+	margin: -48px 80px auto auto;
 }
 
 #menu,
@@ -213,10 +209,18 @@ html, body {
 	letter-spacing: 3px;
 }
 
+#taphouse li{
+	font-family: Georgia,Times,"Times New Roman",serif !important;
+}
+
+.header #taphouse{
+	margin-top: 35px !important;
+}
+
 .headerScroll #burger{
 	display: none;
 	cursor: pointer;
-	margin: -30px 20px auto auto;
+	margin: -20px 80px auto auto;
 }
 
 .headerScroll ul *{
@@ -232,17 +236,20 @@ html, body {
 	width: 100% !important;
 }
 
+.header .selected,
 .headerScroll .selected {
-	background: black;
+  background: #000;
 }
 
-.headerScroll .selected a{
-	color: white;
-	border: none !important;
+.header .selected a,
+.headerScroll .selected a {
+  color: #fff;
+  border: none !important;
 }
 
-.headerScroll .selected + li a{
-	border: none !important;
+.header .selected + li a,
+.headerScroll .selected + li a {
+  border: none !important;
 }
 
 
@@ -265,7 +272,7 @@ html, body {
 
 .bannerImg{
 	width: 100%;
-	vertical-align: bottom;
+	min-width: 800px;
 }
 
 .normalImg{
@@ -326,11 +333,6 @@ a.btn{
 	text-align: center;
 }
 
-.footer .row img{
-	-webkit-filter: invert(100%);
-	filter: invert(100%);
-}
-
 .footer h3{
 	color: #fff;
 	font-family: norwester;
@@ -338,6 +340,9 @@ a.btn{
 
 .footer .copyright{
 	margin-left: 5%;
+	margin-bottom: 50px;
+	font-size: 14px;
+	letter-spacing: 2px;
 }
 
 .container h2.menuTitle{

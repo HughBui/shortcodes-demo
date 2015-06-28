@@ -18,6 +18,10 @@
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 /* line 68, ../src/css/_grid.sass */
 .row .row {
@@ -394,15 +398,6 @@ html, body {
   background: #f7f7f7;
 }
 
-/* line 209, ../src/css/style.sass */
-.invert {
-  background: #000;
-}
-/* line 211, ../src/css/style.sass */
-.invert * {
-  color: #fff !important;
-}
-
 /* line 215, ../src/css/style.sass */
 .header {
   height: 220px;
@@ -413,10 +408,12 @@ html, body {
 }
 /* line 221, ../src/css/style.sass */
 .header ul {
+  height: 50px;
   margin-left: -30px;
 }
 /* line 226, ../src/css/style.sass */
 .header ul li {
+  height: 50px;
   float: left;
   line-height: 18px;
 }
@@ -426,6 +423,7 @@ html, body {
   margin: auto 0 auto 0;
   color: #000;
   font-size: 23px;
+  margin-top: 12px;
 }
 /* line 235, ../src/css/style.sass */
 .header ul li:not(:first-child) a {
@@ -434,7 +432,7 @@ html, body {
 
 /* line 241, ../src/css/style.sass */
 .headerScroll {
-  height: 50px;
+  height: 80px;
 }
 /* line 244, ../src/css/style.sass */
 .headerScroll .row {
@@ -443,8 +441,8 @@ html, body {
 }
 /* line 248, ../src/css/style.sass */
 .headerScroll ul {
-  height: 50px;
-  line-height: 50px;
+  height: 80px;
+  line-height: 80px;
   padding: 0;
 }
 /* line 252, ../src/css/style.sass */
@@ -453,15 +451,15 @@ html, body {
 }
 /* line 256, ../src/css/style.sass */
 .headerScroll ul li {
-  height: 50px;
+  height: 80px;
   margin: 0 !important;
   padding: 0 !important;
 }
 /* line 260, ../src/css/style.sass */
 .headerScroll ul li a {
-  padding: 0 15px;
+  padding: 0 25px;
   margin: auto 0 auto 0;
-  margin-top: 15px;
+  margin-top: 26px;
   color: #000;
 }
 /* line 266, ../src/css/style.sass */
@@ -482,36 +480,39 @@ html, body {
   display: inline;
   position: absolute;
   text-align: left;
-  margin: -40px 20px auto 0;
+  margin: -25px auto auto 80px;
   left: 20px;
   z-index: 5;
 }
 /* line 286, ../src/css/style.sass */
 .headerScroll #taphouse {
   text-align: right;
-  margin: -48px 20px auto auto;
+  margin: -48px 80px auto auto;
 }
 /* line 290, ../src/css/style.sass */
 .headerScroll #menu {
   text-align: right;
-  margin: -48px 20px auto auto;
+  margin: -48px 80px auto auto;
 }
 /* line 294, ../src/css/style.sass */
 .headerScroll #burger {
   display: none;
   cursor: pointer;
-  margin: -30px 20px auto auto;
+  margin: -20px 80px auto auto;
 }
 /* line 299, ../src/css/style.sass */
+.header .selected,
 .headerScroll .selected {
   background: #000;
 }
 /* line 301, ../src/css/style.sass */
+.header .selected a,
 .headerScroll .selected a {
   color: #fff;
   border: none !important;
 }
 /* line 305, ../src/css/style.sass */
+.header .selected + li a,
 .headerScroll .selected + li a {
   border: none !important;
 }
@@ -531,6 +532,10 @@ html, body {
   font-family: Georgia, Times, "Times New Roman", serif !important;
 }
 
+.header #taphouse{
+  margin-top: 35px !important;
+}
+
 /* line 317, ../src/css/style.sass */
 .arrowBtn {
   position: absolute;
@@ -547,9 +552,9 @@ html, body {
 }
 
 /* line 328, ../src/css/style.sass */
-.bannerImg {
+.bannerImg{
   width: 100%;
-  vertical-align: bottom;
+  min-width: 700px;
 }
 
 /* line 332, ../src/css/style.sass */
@@ -601,18 +606,18 @@ hr.white {
   width: 100%;
   text-align: center;
 }
-/* line 371, ../src/css/style.sass */
-.footer .row img {
-  filter: invert(100%);
-}
+
 /* line 375, ../src/css/style.sass */
 .footer h3 {
   color: #fff;
   font-family: norwester;
 }
 /* line 379, ../src/css/style.sass */
-.footer .copyright {
+.footer .copyright{
   margin-left: 5%;
+  margin-bottom: 50px;
+  font-size: 14px;
+  letter-spacing: 2px;
 }
 
 /* line 383, ../src/css/style.sass */
@@ -642,13 +647,13 @@ a.btn {
   text-align: right !important;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 850px) {
   /* line 6, ../src/css/_menu.sass */
   #burger {
     display: none;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   /* line 11, ../src/css/_menu.sass */
   #burger {
     display: inline;
@@ -672,6 +677,38 @@ a.btn {
   .headerScroll #menu .selected {
     background: black;
   }
+
+  .row{
+   display: block;
+  }
+
+  .arrowBtn{
+    -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.5); /* FF3.5+ */
+      -ms-transform: scale(0.5); /* IE9 */
+       -o-transform: scale(0.5); /* Opera 10.5+ */
+          transform: scale(0.5);
+             /* IE6–IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+    margin-top: -20px;
+  }
+}
+@media(max-width:650px) {
+  .headerScroll #logoSmall{
+        margin: -25px auto auto 20px;
+    }
+
+    .headerScroll #taphouse{
+        margin: -48px 20px auto auto;
+    }
+
+    .headerScroll #menu{
+        margin: 35px 20px auto auto;
+    }
+
+    .headerScroll #burger{
+        margin: -20px 20px auto auto;
+    }
 }
 @media(max-width:600px) {
   /* line 2, ../src/css/_responsive.sass */
@@ -702,7 +739,7 @@ a.btn {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 70px;
+  height: 80px;
   width: 0;
   margin: 0 auto;
   background: white;
