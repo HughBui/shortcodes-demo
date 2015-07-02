@@ -1,7 +1,7 @@
 <?php
 if(count($bgImages) == 0){
 	print_r('
-		<div class="container content '.$a["color"].'">
+		<div class="container content '.($a["post"] == "true" ? "post" : "").' '.($a["dark"] == "true" ? "dark" : "").'">
 			<div class="row '.($a["narrow"] == "true" ? "narrow" : "").'">
 				'.do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).'
 			</div>
