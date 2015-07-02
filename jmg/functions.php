@@ -36,11 +36,12 @@ add_shortcode('imageItem', function($atts, $content) {
 add_shortcode('columns', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'bg' => '',
-		'color' => '',
+		'dark' => 'false',
 		'header' => 'false',
 		'narrow' => 'false',
 		'arrow' => 'false',
-		'desaturate' => 'false'
+		'desaturate' => 'false',
+		'post' => 'false'
 		), $atts );
 
 	// $bgImg = $a["bg"] != '' ? get_static_uri($a["bg"]) : '';
