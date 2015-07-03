@@ -15,7 +15,6 @@
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  border: 1px solid blue;
 }
 /* line 68, ../src/css/_grid.sass */
 .row .row {
@@ -280,8 +279,10 @@ html, body {
 .container p {
   width: 100%;
   color: #3d5e6d;
-  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  font-size: 25px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: lighter;
   text-align: center;
 }
 /* line 119, ../src/css/style.sass */
@@ -303,7 +304,7 @@ html, body {
 
 .container.post,
 .container.post *{
-	padding: 0px !important;
+	padding: 5px !important;
 	margin: 0px auto !important;
 }
 
