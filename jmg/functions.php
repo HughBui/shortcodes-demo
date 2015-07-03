@@ -67,9 +67,10 @@ add_shortcode('column', function($atts, $content) {
 
 add_shortcode('title', function($atts, $content) {
 	$a = shortcode_atts( array(
-		'type' => 'h2'
+		'type' => 'h2',
+		'style' => ''
 		), $atts );
-	return '<'.$a["type"].'>'.$content.'</'.$a["type"].'>';
+	return '<'.$a["type"].($a["style"] != "" ? " style=\"".$a["style"]."\"" : "").'>'.$content.'</'.$a["type"].'>';
 });
 
 add_shortcode('separator', function($atts, $content) {
@@ -79,10 +80,12 @@ add_shortcode('separator', function($atts, $content) {
 add_shortcode('paragraph', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'type' => '',
-		'color' => ''
+		'style' => ''
 		), $atts );
 
-	return '<p class="'.$a["type"].'" '.($a["color"] != "" ? "style=\"color:".$a["color"].";\"" : "").'>'.$content.'</p>';
+	return '<p class="'.$a["type"].'" '
+	.($a["style"] != "" ? "style=\"".$a["style"]."\"" : "").'>'
+	.$content.'</p>';
 });
 
 add_shortcode('image', function($atts, $content) {
