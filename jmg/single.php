@@ -1,8 +1,15 @@
 <?php get_header(); ?>
 
-<div style="height:220px;"></div>
-
-
+<div id="carousel" class="container content header bgDiv" style="background: url('<?php echo get_static_uri('banner_images/blog_post_header.jpg'); ?>') no-repeat;
+background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;
+background-position: center center; margin-bottom: 100px;">
+	<div class="row ">
+		<div class="col col-span-1">
+			<h1>THE LARGEST &#038; MOST <br/> EXPERIENCED IN WA</h1>
+			<p class="" >WA&#8217;S LARGEST &#038; MOST PROGRESSIVE CERTIFICATION COMPANY.</p>
+		</div>
+	</div>
+</div>
 
 <?php 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -45,7 +52,7 @@ endif;
 		<?php endwhile; endif; ?>
 	</div>		
 </div>
-<div class="container content post" style="margin: 50px auto 100px auto !important;">
+<div class="container content" style="margin: 50px auto 100px auto !important;">
 	<div class="row">
 		<div class="col col-span-1 middle-left" style="border-top: 1px solid gray; border-bottom: 1px solid gray;">
 			<p style="font-size: 12px !important; line-height: 10px;">< <?php previous_post_link('%link', 'Previous', FALSE); ?></p>
