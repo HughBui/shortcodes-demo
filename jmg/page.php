@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: Taphouse
- * Description: Taphouse Page.
+ * Template Name: JMG
+ * Description: JMG Page.
  */
 
 // Code to display Page goes here...?>

@@ -36,8 +36,8 @@ $categories = get_categories();
 <?php get_header(); ?>
 
 <div id="carousel" class="container content header bgDiv" style="background: url('<?php echo get_static_uri('banner_images/blog_post_header.jpg'); ?>') no-repeat;
-background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;
-background-position: center center; margin-bottom: 100px;">
+	background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;
+	background-position: center center; margin-bottom: 100px;">
 	<div class="row ">
 		<div class="col col-span-1">
 			<h1>THE LARGEST &#038; MOST <br/> EXPERIENCED IN WA</h1>
@@ -48,17 +48,19 @@ background-position: center center; margin-bottom: 100px;">
 
 <div class="container content blog">
 	<div class="row">
-		<div class="col col-span-8 middle-left cat">
-			<span class="selected">
-				<?php echo "<a style=\"\" href='".get_site_url()."'>All</a>"; ?>
-			</span>
-			<?php if($categories){ foreach($categories as $category) { ?>
-			<span>
-				<?php echo "<a href='".get_category_link($category->term_id)."'>".$category->cat_name."</a>"; ?>
-			</span>
-			<?php }}?>
+		<div class="col col-span-8 cat">
+			<div>
+				<span <?php echo ($cat == 0 ? "class=\"selected\"" : ""); ?>>
+					<?php echo "<a style=\"\" href='".get_site_url()."'>All</a>"; ?>
+				</span>
+				<?php if($categories){ foreach($categories as $category) { ?>
+				<span <?php echo ($cat == $category->term_id ? "class=\"selected\"" : ""); ?>>
+					<?php echo "<a href='".get_category_link($category->term_id)."'>".$category->cat_name."</a>"; ?>
+				</span>
+				<?php }}?>
+			</div>
 		</div>
-		<div class="col col-span-1 search">
+		<div class="col col-span-3 search top-right">
 			<?php echo do_shortcode('[wpbsearch]'); ?>
 		</div>
 	</div>	
@@ -73,22 +75,26 @@ background-position: center center; margin-bottom: 100px;">
 				</a>
 			</div>
 			<div class="col col-span-1 middle-left extract">
-				<h3><?php the_title(); ?></h3><br/>
+				<h3><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><br/>
 				<p>
-					<?php echo extract_the_content(); echo $s;?><br/>
+					<?php echo extract_the_content();?><br/>
 					<a href="<?php the_permalink(); ?>">(Read more...)</a>
 				</p>
 			</div>		
 		</div>
-		<div class="row">
-			<div class="col col-span-1 middle-left info">
+	</div>
+	<div class="container content blog">
+		<div class="row info">
+			<div class="col col-span-8">
 				<span>
 					By<b><?php echo get_the_author(); ?></b> | 
 					<?php echo get_the_date("F jS, Y"); ?> | 
 					<?php echo get_the_category()[0]->cat_name; ?> | 
 					<?php comments_number(); ?> 
 				</span>
-				<a href="<?php the_permalink(); ?>" style="float: right;">Read More ></a>
+			</div>
+			<div class="col col-span-1 top-right">
+				<a href="<?php the_permalink(); ?>" style="position: relative; right: 0;">Read More ></a>
 			</div>
 		</div>	
 	</div>	

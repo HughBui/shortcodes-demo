@@ -1,5 +1,7 @@
 <?php
 
+show_admin_bar(false);
+
 function get_static_uri($resource){
   return get_template_directory_uri() . '/static/' . $resource;
 }

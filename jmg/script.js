@@ -17,6 +17,9 @@ changeHeaderImage = function(index) {
 
 resize = function() {
   var h, w;
+  if (document.getElementById('bgDiv') == null) {
+        return;
+  }
   w = document.getElementById('bgDiv').offsetWidth;
   h = document.getElementById('bgDiv').offsetHeight;
   if (w > 530) {
