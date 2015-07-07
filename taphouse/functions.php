@@ -61,12 +61,20 @@ add_shortcode('paragraph', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'type' => '',
 		'style' => '',
-		'email' => 'false'
+		'email' => 'false',
+		'phone' => 'false'
 		), $atts );
 
-	return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
-	($a["email"] == "true" ? "<a href=\"mailto:".$content."\" style=\"decoration:none; color:black;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
-	($a["email"] == "true" ? "</a>" : "").'</p>';
+	if($a["email"] == "true"){
+		return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
+		($a["email"] == "true" ? "<a href=\"mailto:".$content."\" style=\"decoration:none; color:black; word-wrap: break-word;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
+		($a["email"] == "true" ? "</a>" : "").'</p>';
+	}else{
+		return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
+		($a["phone"] == "true" ? "<a href=\"tel:".$content."\" style=\"decoration:none; color:black;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
+		($a["phone"] == "true" ? "</a>" : "").'</p>';
+	}
+	
 });
 
 add_shortcode('image', function($atts, $content) {
@@ -115,7 +123,8 @@ add_shortcode('menuItem', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'name' => 'Menu Item',
 		'description' => '',
-		'price' => '0'
+		'price' => '0',
+		'publish' => 'true'
 		), $atts );
 
 	return include(locate_template('content-menuItem.php'));
