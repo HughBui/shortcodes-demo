@@ -2,7 +2,7 @@
 /*Theme Name: Taphouse */
 /*Author: Gramercy Studios */
 /*Author URI: http://www.gramercystudios.com/ */
-/*Version: 1.0 */
+/*Version: 1.0.1 */
 /* -------------------------------------------------------------- */
 /* line 61, ../src/css/_grid.sass */
 .row {
@@ -400,7 +400,7 @@ html, body {
 
 /* line 215, ../src/css/style.sass */
 .header {
-  height: 220px;
+  height: 235px;
 }
 /* line 218, ../src/css/style.sass */
 .header .row {
@@ -554,7 +554,7 @@ html, body {
 /* line 328, ../src/css/style.sass */
 .bannerImg{
   width: 100%;
-  min-width: 700px;
+  min-width: 750px;
 }
 
 /* line 332, ../src/css/style.sass */
@@ -692,6 +692,11 @@ a.btn {
              filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
     margin-top: -20px;
   }
+}
+@media(max-width:750px) {
+.bannerImg{
+        margin-left: -90px;
+    }
 }
 @media(max-width:650px) {
   .headerScroll #logoSmall{

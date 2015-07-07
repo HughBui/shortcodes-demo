@@ -65,7 +65,7 @@ add_shortcode('paragraph', function($atts, $content) {
 		), $atts );
 
 	return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
-	($a["email"] == "true" ? "<a href=\"mailto:".$content."\" style=\"decoration:none; color:black;\">" : "").$content.
+	($a["email"] == "true" ? "<a href=\"mailto:".$content."\" style=\"decoration:none; color:black;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
 	($a["email"] == "true" ? "</a>" : "").'</p>';
 });
 

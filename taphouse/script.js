@@ -43,9 +43,6 @@ showHeader = function(header, i) {
 
 changeBanner = function() {
   var bannerImage, i, next;
-  bannerImage = void 0;
-  i = void 0;
-  next = void 0;
   bannerImage = document.getElementsByClassName('bannerImg');
   i = bannerImage.length;
   next = (new Date).getSeconds() % i;
@@ -60,12 +57,6 @@ changeBanner = function() {
 
 load = function(h) {
   var arrowBtn, bannerImage, bannerImgHeight, headerScroll, i, j, value;
-  arrowBtn = void 0;
-  bannerImage = void 0;
-  bannerImgHeight = void 0;
-  i = void 0;
-  j = void 0;
-  value = void 0;
   headerScroll = document.getElementsByClassName('headerScroll');
   bannerImage = document.getElementsByClassName('bannerImg');
   j = bannerImage.length;
@@ -76,7 +67,7 @@ load = function(h) {
   }
   arrowBtn = document.getElementsByClassName('arrowBtn');
   i = arrowBtn.length;
-  value = (headerScroll.length === 0 ? 200 : 70) + (h === 0 ? bannerImgHeight / 2 : h);
+  value = (headerScroll.length === 0 ? 215 : 80) + (h === 0 ? bannerImgHeight / 2 : h);
   while (i--) {
     arrowBtn[i].style.top = value + 'px';
     arrowBtn[i].style.display = 'inline';
