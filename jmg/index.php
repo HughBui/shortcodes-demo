@@ -104,7 +104,7 @@ $categories = get_categories();
 <div class="container content" style="padding:0px;">
 	<div class="row">
 		<div class="col col-span-1 middle-right" style="display: block;">
-			<? pagination($the_query->max_num_pages); ?>
+			<?php pagination($the_query->max_num_pages); ?>
 		</div>
 	</div>
 </div>
