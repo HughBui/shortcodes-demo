@@ -74,7 +74,7 @@ $categories = get_categories();
 					<img class="normalImg" src="<?php echo catch_that_image(); ?>"/>
 				</a>
 			</div>
-			<div class="col col-span-1 middle-left extract">
+			<div class="col col-span-1 extract">
 				<h3><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><br/>
 				<p>
 					<?php echo extract_the_content();?><br/>

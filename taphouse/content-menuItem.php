@@ -6,7 +6,7 @@ return'
 		'.($a["description"] == "" ? "" : "<p class=\"small\">".$a["description"]."</p>").'
 	</div>
 	<div class="col col-span-1 no-padding">
-		<p class="price">'.($a["publish"] == "false" ? "&nbsp;" : "\$".$a["price"]).'</p>
+		<p class="price">'.($a["price"] == "" ? "&nbsp;" : "\$".$a["price"]).'</p>
 	</div>
 </div>
 ';

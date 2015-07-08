@@ -238,9 +238,10 @@ html, body {
 
 /* line 63, ../src/css/style.sass */
 .container p.small, .container a {
-  color: #5c96bc;
-  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  color: gray;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
   font-size: 18px;
+  line-height: 25px;
   font-weight: normal;
 }
 
@@ -258,7 +259,7 @@ html, body {
   width: 100%;
 }
 .header.bgDiv .col{
-  margin: 100px auto;
+  margin: 60px auto;
 }
 /* line 93, ../src/css/style.sass */
 .container.header h1 {
@@ -279,14 +280,13 @@ html, body {
 .container.header p {
   color: #fff;
 }
-/* line 107, ../src/css/style.sass */
+/* line 107, ../src/css/style.sass */ 
 .container p {
   width: 100%;
   color: #3d5e6d;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: lighter;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 22px;
+  line-height: 35px;
   text-align: center;
 }
 /* line 119, ../src/css/style.sass */
@@ -357,6 +357,10 @@ html, body {
 
 .container.blog .col.extract{
   padding:10px !important;
+}
+
+.container.blog .col.extract *{
+  text-align: left;
 }
 
 .container.blog .col.extract p{
@@ -586,14 +590,17 @@ a.btn {
 /* line 289, ../src/css/style.sass */
 .col.middle-left * {
   text-align: left !important;
+  margin: auto !important;
 }
 /* line 292, ../src/css/style.sass */
 .col.middle-center * {
   text-align: center !important;
+  margin: auto !important;
 }
 /* line 295, ../src/css/style.sass */
 .col.middle-right * {
   text-align: right !important;
+  /*margin: auto !important;*/
 }
 /* line 298, ../src/css/style.sass */
 .col.bottom-left * {

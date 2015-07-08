@@ -67,7 +67,7 @@ add_shortcode('paragraph', function($atts, $content) {
 
 	if($a["email"] == "true"){
 		return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
-		($a["email"] == "true" ? "<a href=\"mailto:".$content."\" style=\"decoration:none; color:black; word-wrap: break-word;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
+		($a["email"] == "true" ? "<a href=\"mailto:".str_replace(array("<br/>", "<br />", "<p>", "</p>"), "", $content)."\" style=\"decoration:none; color:black;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
 		($a["email"] == "true" ? "</a>" : "").'</p>';
 	}else{
 		return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
@@ -123,8 +123,7 @@ add_shortcode('menuItem', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'name' => 'Menu Item',
 		'description' => '',
-		'price' => '0',
-		'publish' => 'true'
+		'price' => ''
 		), $atts );
 
 	return include(locate_template('content-menuItem.php'));
