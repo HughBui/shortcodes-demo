@@ -106,7 +106,8 @@ add_shortcode('columns', function($atts, $content) {
 		'narrow' => 'false',
 		'arrow' => 'false',
 		'desaturate' => 'false',
-		'post' => 'false'
+		'post' => 'false',
+		'grid' => 'false'
 		), $atts );
 
 	$bgImages = $a["bg"] != '' ? explode(";",$a["bg"]) : [];
@@ -122,6 +123,7 @@ add_shortcode('column', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'bg' => '',
 		'span' => '1',
+		'collapsible' => 'false',
 		'align' => ''
 		), $atts );
 
@@ -195,4 +197,12 @@ add_shortcode('menuItem', function($atts, $content) {
 	return include(locate_template('content-menuItem.php'));
 });
 
+add_shortcode('item', function($atts, $content) {
+	$a = shortcode_atts( array(
+		'title' => 'Item Title',
+		'content' => 'Item Content'
+		), $atts );
+
+	return include(locate_template('content-collapsible.php'));
+});
 ?>
