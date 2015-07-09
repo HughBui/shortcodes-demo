@@ -1,6 +1,6 @@
 <?php
 if($colImg == ''){
-	return '<div class="col col-span-'.$a["span"].' '.$a["align"].'">
+	return '<div class="col col-span-'.$a["span"].' '.($a["collapsible"] == "true" ? "collapsible" : "").' '.$a["align"].'">
 				'.do_shortcode($content).'
 			</div>
 			';
