@@ -1,5 +1,21 @@
 var changeHeaderImage, resize;
 
+function toggle(node){
+	for (var i=0; (node=node.previousSibling); i++);
+	var index = Math.floor(i/4);
+
+	var toggle = document.getElementsByClassName("toggle");
+	var toggleContent = document.getElementsByClassName("toggleContent");
+	
+	for(var i = 0; i < toggle.length; i++){
+		toggle[i].innerHTML = (i == index ? '--' : '+' );
+		toggle[i].style.backgroundColor = (i == index ? '#001937' : 'grey' );
+		toggleContent[i].style.display = (i == index ? '' : 'none' );
+
+	}
+	return true;
+}
+
 changeHeaderImage = function(index) {
   var carousel, color, dots, headerImage, i;
   headerImage = document.getElementsByClassName('headerImage');
@@ -41,4 +57,5 @@ window.onresize = function(event) {
 
 window.onload = function(event) {
   resize();
+  toggle(0); 
 };
