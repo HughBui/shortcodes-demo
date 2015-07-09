@@ -936,8 +936,8 @@ input[type=checkbox]:checked ~ #menu {
     display: block;
   }
 
-  .extract a .normalImg{
-    height: 150px;
+  .extract .normalImg{
+    height: 150px !important;
   }
 }
 @media(max-width:820px) {
