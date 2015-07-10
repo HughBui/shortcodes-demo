@@ -37,7 +37,7 @@ $categories = get_categories();
 
 <div id="carousel" class="container content header bgDiv" style="background: url('<?php echo get_static_uri('banner_images/blog_post_header.jpg'); ?>') no-repeat;
 	background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;
-	background-position: center center; margin-bottom: 100px;">
+	background-position: center center;">
 	<div class="row ">
 		<div class="col col-span-1">
 			<h1>THE LARGEST &#038; MOST <br/> EXPERIENCED IN WA</h1>
@@ -46,7 +46,7 @@ $categories = get_categories();
 	</div>
 </div>
 
-<div class="container content blog">
+<div class="container content blog" style="padding-top: 100px !important;">
 	<div class="row">
 		<div class="col col-span-8 cat">
 			<div>

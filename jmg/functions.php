@@ -146,12 +146,20 @@ add_shortcode('separator', function($atts, $content) {
 add_shortcode('paragraph', function($atts, $content) {
 	$a = shortcode_atts( array(
 		'type' => '',
-		'style' => ''
+		'style' => '',
+		'email' => 'false',
+		'phone' => 'false'
 		), $atts );
 
-	return '<p class="'.$a["type"].'" '
-	.($a["style"] != "" ? "style=\"".$a["style"]."\"" : "").'>'
-	.$content.'</p>';
+	if($a["email"] == "true"){
+		return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
+		($a["email"] == "true" ? "<a href=\"mailto:".str_replace(array("<br/>", "<br />", "<p>", "</p>"), "", $content)."\" style=\"decoration:none; color:black;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
+		($a["email"] == "true" ? "</a>" : "").'</p>';
+	}else{
+		return '<p class="'.$a["type"].'" style="'.$a["style"].'">'.
+		($a["phone"] == "true" ? "<a href=\"tel:".$content."\" style=\"decoration:none; color:black;\">" : "").do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).
+		($a["phone"] == "true" ? "</a>" : "").'</p>';
+	}
 });
 
 add_shortcode('image', function($atts, $content) {
@@ -162,7 +170,10 @@ add_shortcode('image', function($atts, $content) {
 });
 
 add_shortcode('link', function($atts, $content) {
-	return '<a href="'.$atts["to"].'">'.$content.'</a>';
+	$a = shortcode_atts( array(
+		'style' => ''
+		), $atts );
+	return '<a '.($a["style"] != "" ? "style=\"".$a["style"]."\"" : "").' href="'.$atts["to"].'">'.$content.'</a>';
 });
 
 add_shortcode('social', function($atts, $content) {

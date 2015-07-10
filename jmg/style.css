@@ -227,6 +227,7 @@ html, body {
   height: 100%;
   max-width: 1400px;
   background: #e5e5e5;
+  overflow-x: hidden;
 }
 
 /* line 54, ../src/css/style.sass */
@@ -341,7 +342,7 @@ html, body {
 }
 
 .container.post.related-posts{
-	margin-top: 50px !important;
+	padding-top: 50px !important;
 }
 
 .container.post.related-posts p{
@@ -357,8 +358,8 @@ html, body {
 	width: 100%;
 }
 
-.container.post.previous{
-	margin: 50px auto 100px auto !important;
+.container.post.previous .row{
+	height: 100px;
 }
 
 .container.blog span{
@@ -421,6 +422,7 @@ html, body {
   border-top: 1px solid gray; 
   border-bottom: 1px solid gray; 
   padding:2px !important;
+  height: 25px;
 }
 
 .container.post .info p{

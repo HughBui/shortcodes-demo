@@ -1,5 +1,6 @@
 <div class="container header sticky">
-	<img id="logo" src="<?php echo get_static_uri('header_footer/jmg_logo_panel.png');?>"/>
+	<img id="logo" src="<?php echo get_static_uri('header_footer/jmg_logo_panel.png');?>"
+	onclick="window.location.href ='<?php echo get_site_url(); ?>';" style="cursor:pointer;"/>
 	<label for="show-menu" class="show-menu">
 		<img src="<?php echo get_static_uri('header_footer/hamburger_icon.png');?>"/>
 	</label>
