@@ -21,8 +21,8 @@
         <div>
           <span>Connect to us Via social:</span>
           <span class="social-links">
-          <span class="social-linkedin"><a href=""><img src="<?php echo get_static_uri('social-linkedin.png'); ?>"></img></a></span>
-          <span class="social-twitter"><a href=""><img src="<?php echo get_static_uri('social-twitter.png'); ?>"></img></a></span>
+          <span class="social-linkedin"><a href="http://www.linkedin.com/groups?home=&gid=6689207"><img src="<?php echo get_static_uri('social-linkedin.png'); ?>"></img></a></span>
+          <span class="social-twitter"><a href="https://twitter.com/JDLCentre"><img src="<?php echo get_static_uri('social-twitter.png'); ?>"></img></a></span>
           <span class="social-youtube"><a href=""><img src="<?php echo get_static_uri('social-youtube.png'); ?>"></img></a></span>
         </div>
       </div>
