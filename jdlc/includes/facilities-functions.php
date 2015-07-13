@@ -133,19 +133,26 @@ function person_shortcode($atts) {
     'picture' => '',
     'description' => '',
     'department' => '',
+	'link' => '',
     'email' => '',
     'phone' => ''
   ), $atts);
   
-  return <<<HTML
+  $departments = explode("|", $a['department']);
+  $links = explode("|", $a['link']);
+  $deps = "";
+  for($i = 0; $i < count($departments); $i++){
+	$deps .= '<span '.(trim($links[$i]) == '' || isset($links[$i]) == false ? "" : "style=\"cursor: pointer;\" onclick=\"window.location='".trim($links[$i])."'\"").'>'.trim($departments[$i]).'</span> & ';
+  }
+  
+  return '
 <div class="person">
-  <div class="picture" style="background-image: url({$a['picture']})"></div>
-  <div class="name">{$a['name']}</div>
-  <div class="department">{$a['department']}</div>
-  <div class="email">{$a['email']}</div>
-  <div class="phone">{$a['phone']}</div>
-</div>
-HTML;
+  <div class="picture" style="background-image: url('.$a['picture'].')"></div>
+  <div class="name">'.$a['name'].'</div>
+  <div class="department">'.substr($deps, 0, -3).'</div>
+  <div class="email">'.$a['email'].'</div>
+  <div class="phone">'.$a['phone'].'</div>
+</div>';
 }
 add_shortcode('person', 'person_shortcode');
 
