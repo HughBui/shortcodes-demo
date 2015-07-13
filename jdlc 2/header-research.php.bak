@@ -1,0 +1,11 @@
+<?php get_template_part('head'); ?>
+<body>
+<div id="wrapper">
+<div id="header-research" style="<?php echo jdlc_gradient_css('rgba(75,85,130,0.9)', 'rgba(75,85,130,0.9)', get_static_uri('research-image.jpg')); ?>">
+<?php get_template_part('menu'); ?>
+<div class="header_text">
+  <div class="title">John De Laeter Centre is a key training and research facility for isotope scientists in Western Australia. We have produced 480 international peer-reviewed publications from 2006-2009.</div>
+  <div class="subtitle">- Needs new statistic</div>
+</div>
+</div>
+</div>

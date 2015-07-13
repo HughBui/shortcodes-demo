@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'gramercy';
+	src:url('fonts/gramercy.eot');
+	src:url('fonts/gramercy.eot') format('embedded-opentype'),
+		url('fonts/gramercy.woff') format('woff'),
+		url('fonts/gramercy.ttf') format('truetype'),
+		url('fonts/gramercy.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
