@@ -43,7 +43,8 @@ endif;
 		<?php query_posts( array( 'posts_per_page' => 3 ) ); ?>
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
 			<div class="col col-span-1 middle-left">
-				<a href="<?php the_permalink(); ?>"><img src="<?php echo catch_that_image(); ?>"/></a>
+				<img class="normalImg" src="<?php echo catch_that_image(); ?>" 
+					onclick="window.location.href ='<?php the_permalink(); ?>';" style="cursor:pointer;"/>
 				<p>
 					<b><?php the_title(); ?></b><br/>
 					<span><?php echo get_the_date("F jS"); ?></span>

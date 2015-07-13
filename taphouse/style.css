@@ -2,7 +2,7 @@
 /*Theme Name: Taphouse */
 /*Author: Gramercy Studios */
 /*Author URI: http://www.gramercystudios.com/ */
-/*Version: 1.0.2 */
+/*Version: 1.0.̀̀̀6*/
 /* -------------------------------------------------------------- */
 /* line 61, ../src/css/_grid.sass */
 .row {
@@ -615,7 +615,7 @@ hr.white {
 /* line 379, ../src/css/style.sass */
 .footer .gramercy,
 .footer .copyright{
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 	font-size: 14px;
 	letter-spacing: 2px;
 }

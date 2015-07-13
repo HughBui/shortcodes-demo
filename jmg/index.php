@@ -70,10 +70,8 @@ $categories = get_categories();
 	<div class="container content blog">
 		<div class="row">
 			<div class="col col-span-1 middle-left extract">
-				<!-- <a href="<?php the_permalink(); ?>"> -->
 					<img class="normalImg" src="<?php echo catch_that_image(); ?>" 
 					onclick="window.location.href ='<?php the_permalink(); ?>';" style="cursor:pointer;"/>
-				<!-- </a> -->
 			</div>
 			<div class="col col-span-1 extract">
 				<h3><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3><br/>

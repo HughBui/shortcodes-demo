@@ -1,7 +1,10 @@
 /* */
-/* Theme Name: JMG */
+/*Theme Name: JMG */
+/*Author: Gramercy Studios */
+/*Author URI: http://www.gramercystudios.com/ */
+/*Version: 1.0.0 */
 /* -------------------------------------------------------------- */
-/* line 61, ../src/css/_grid.sass */
+
 .row {
   margin-top: 0.5rem;
   width: 90%;
@@ -227,7 +230,6 @@ html, body {
   height: 100%;
   max-width: 1400px;
   background: #e5e5e5;
-  overflow-x: hidden;
 }
 
 /* line 54, ../src/css/style.sass */
@@ -422,7 +424,6 @@ html, body {
   border-top: 1px solid gray; 
   border-bottom: 1px solid gray; 
   padding:2px !important;
-  height: 25px;
 }
 
 .container.post .info p{
@@ -434,7 +435,7 @@ html, body {
   max-width: 100%;
   margin: 0 auto auto 0 !important;
   font-size: 12px !important;
-  line-height: 10px;
+  /*line-height: 10px;*/
 }
 
 .container.blog .col.search{
@@ -1001,6 +1002,7 @@ input[type=checkbox]:checked ~ #menu {
     display: block;
   }
 
+  .post .normalImg,
   .extract .normalImg{
     height: 150px !important;
   }
@@ -1047,8 +1049,7 @@ input[type=checkbox]:checked ~ #menu {
 @media(max-width:730px) {
   /* line 102, ../src/css/_responsive.sass */
   .footer ul {
-    width: auto;
-    margin-left: -30px;
+    width: 170px;
     text-align: center;
   }
   /* line 107, ../src/css/_responsive.sass */
@@ -1058,13 +1059,13 @@ input[type=checkbox]:checked ~ #menu {
   }
   /* line 111, ../src/css/_responsive.sass */
   .footer ul li:nth-child(4) {
-    border-left: 2px solid #abafb2;
-    margin-left: 3px;
-    padding-left: 3px;
+    border-left: none;
+    margin-left: -19px;
+    padding-left: -19px;
   }
   /* line 116, ../src/css/_responsive.sass */
   .footer ul li:nth-child(5) {
-    width: auto;
+    width: 38px;
   }
 
   /* line 123, ../src/css/_responsive.sass */

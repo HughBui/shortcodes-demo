@@ -3,26 +3,31 @@
 show_admin_bar(false);
 
 function get_static_uri($resource){
-  return get_template_directory_uri() . '/static/' . $resource;
+	return get_template_directory_uri() . '/static/' . $resource;
 }
 
 function catch_that_image() {
-  global $post, $posts;
-  
-  $content =  $post->post_content;
-  $findme1   = '[image]';
+	global $post, $posts;
+
+	$content =  $post->post_content;
+	$findme1   = '[image]';
 	$findme2   = '[/image]';
 	$pos1 = strpos($content, $findme1);
 	$pos2 = strpos($content, $findme2);
+
+	if($pos1 == false){
+		$findme1   = '[image fit="true"]';
+		$pos1 = strpos($content, $findme1);
+	}
 	
 	return get_static_uri(substr($content, $pos1 + strlen($findme1), $pos2 - $pos1 - strlen($findme1)));
 }
 
 function extract_the_content() {
-  global $post, $posts;
-  
-  $content =  $post->post_content;
-  $findme1   = '[paragraph]';
+	global $post, $posts;
+
+	$content =  $post->post_content;
+	$findme1   = '[paragraph]';
 	$findme2   = '[/paragraph]';
 	$pos1 = strpos($content, $findme1);
 	$pos2 = strpos($content, $findme2);
@@ -32,51 +37,51 @@ function extract_the_content() {
 
 function pagination($pages = '', $range = 2)
 {  
-     $showitems = ($range * 2)+1;  
+	$showitems = ($range * 2)+1;  
 
-     global $paged;
-     if(empty($paged)) $paged = 1;
+	global $paged;
+	if(empty($paged)) $paged = 1;
 
-     if($pages == '')
-     {
-         global $wp_query;
-         $pages = $wp_query->max_num_pages;
-         if(!$pages)
-         {
-             $pages = 1;
-         }
-     }   
+	if($pages == '')
+	{
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+		if(!$pages)
+		{
+			$pages = 1;
+		}
+	}   
 
-     if(1 != $pages)
-     {
-         echo "<div class='pagination'>";
+	if(1 != $pages)
+	{
+		echo "<div class='pagination'>";
          // if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo;</a>";
-         if($paged > 1 && $showitems < $pages) echo "<a style=\"border: none; font-weight: bold;\" href='".get_pagenum_link($paged - 1)."'>Previous</a>";
+		if($paged > 1 && $showitems < $pages) echo "<a style=\"border: none; font-weight: bold;\" href='".get_pagenum_link($paged - 1)."'>Previous</a>";
 
-         for ($i=1; $i <= $pages; $i++)
-         {
-             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-             {
-                 echo ($paged == $i)? "<span class='current'>".$i."</span>":"<a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a>";
-             }
-         }
+		for ($i=1; $i <= $pages; $i++)
+		{
+			if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+			{
+				echo ($paged == $i)? "<span class='current'>".$i."</span>":"<a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a>";
+			}
+		}
 
-         if ($paged < $pages && $showitems < $pages) echo "<a style=\"border: none; font-weight: bold;\" href='".get_pagenum_link($paged + 1)."'>Next</a>";  
+		if ($paged < $pages && $showitems < $pages) echo "<a style=\"border: none; font-weight: bold;\" href='".get_pagenum_link($paged + 1)."'>Next</a>";  
          // if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>&raquo;</a>";
-         echo "</div>\n";
-     }
+		echo "</div>\n";
+	}
 }
 
 function wpbsearchform( $form ) {
 
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '">
-    <div>
-	    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..."/>
-	    <input type="image" id="searchsubmit" src="'.get_static_uri('blog/search_icon.png').'"/>
-    </div>
-    </form>';
+	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '">
+	<div>
+		<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..."/>
+		<input type="image" id="searchsubmit" src="'.get_static_uri('blog/search_icon.png').'"/>
+	</div>
+</form>';
 
-    return $form;
+return $form;
 }
 
 add_shortcode('wpbsearch', 'wpbsearchform');
@@ -113,7 +118,7 @@ add_shortcode('columns', function($atts, $content) {
 	$bgImages = $a["bg"] != '' ? explode(";",$a["bg"]) : [];
 
 	foreach ($bgImages as &$image) {
-	    $image = get_static_uri(preg_replace('/\s+/', '', $image));
+		$image = get_static_uri(preg_replace('/\s+/', '', $image));
 	}
 
 	include(locate_template('content-container.php'));
