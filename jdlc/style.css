@@ -571,7 +571,7 @@ Text Domain: jdlc
 /* line 122, ../src/css/_facilities.sass */
 #main.facility .grid .grid_item {
   width: 30%;
-  min-width: 250px;
+  min-width: 300px;
   flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -1400,8 +1400,8 @@ img.perth-skyline {
 /* line 88, ../src/css/_headers.sass */
 #header-index .feature-image .play_button {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 20%;
   width: 200px;
 }
 /* line 94, ../src/css/_headers.sass */
@@ -1536,7 +1536,7 @@ img.perth-skyline {
 }
 
 .menu .menu-items .contact-button:hover a{
-	  color: #747474;
+ color: #747474;
 }
 
 /* line 6, ../src/css/_research.sass */
@@ -1812,19 +1812,20 @@ body #delimiter {
 #map{
   border-style:solid;
   border-width:1px;
-  border-color:red;
+  border-color:transparent;
   position: relative;
 }
 
 #balloonMap{
   position: relative;
-  border: 1px solid blue;
+  overflow: visible;
 }
 
 #balloonMap span{
   position: absolute; 
-  margin-top:-19px; 
-  margin-left:-7px;
+  margin-top:-30px; 
+  margin-left:-12px;
+  width: 133px;
 }
 
 .balloon {  
@@ -1844,82 +1845,111 @@ body #delimiter {
 .tag{
   float: right;
   width: 100px;
-  line-height: 20px;
-  font-size: 10px;
+  line-height: 24px;
+  font-size: 12px;
   display:none;
+  padding-left: 5px;
 }
 
-.email a{
-  text-decoration: none;
+a{
+  text-decoration: none !important;
 }
 
 #burger-part{
 	display: none;
 	cursor: pointer;
+  z-index: 101;
 }
 
 @media screen and (max-width: 850px) {
-	#menu-part{
-		display: none;
-		position: absolute;
-		top: 150px;
-		left: 50%;
-		margin-left: -150px;
-		z-index: 2;
-	}
-	
-	#menu-part span{
-		border-top: 1px solid #747474;
-		border-left: 1px solid #747474;
-		border-right: 1px solid #747474;
-		background-color: white;
-		display: block;
-		width: 300px;
-		line-height: 70px;
-		text-align: center;
-		padding: 0px;
-	}
-	
-	#menu-part span:first-child{
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	
-	#menu-part span:last-child{
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
-		border-bottom: 1px solid #747474;
-	}
-	
-	#menu-part span a{
-		color: #747474;
-	}
-	
-	#menu-part span.selected,
-	#menu-part span:hover {
-		background-color: #747474;
-	}
-	
-	#menu-part span.selected a,
-	#menu-part span:hover a{
-		color: white;
-	}
-	
-	#burger-part{
-		display: block;
-		margin-top: 20px;
-	}
-	
-	#balloonMap{
-		display: none;
-	}
-	
-	#header-index .feature-image {
-		height: 300px;
-	}
-	
-	.menu .logo {
-		width: 160px;
-		height: 40px;
-	}
+  #map{
+    margin-top: 50px !important;
+  }
+
+  #menu-part{
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -135px;
+    z-index: 101;
+  }
+
+  #menu-part span a,
+  #menu-part span{
+    border-top: 1px solid #747474;
+    border-left: 1px solid #747474;
+    border-right: 1px solid #747474;
+    background-color: white;
+    display: block;
+    width: 260px;
+    line-height: 70px;
+    text-align: center;
+    padding: 0px;
+  }
+
+  #menu-part span:first-child a,
+  #menu-part span:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  #menu-part span:last-child a,
+  #menu-part span:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid #747474;
+  }
+
+  #menu-part span a{
+    color: #747474;
+  }
+
+  #menu-part span.selected,
+  #menu-part span:hover {
+    background-color: #747474;
+  }
+  
+  #menu-part span:hover a{
+    color: white;
+  }
+
+  #menu-part span.selected a,
+  #menu-part span a:hover{
+    color: white;
+    background-color: #747474;
+  }
+
+  #burger-part{
+    display: block;
+    margin-top: 20px;
+    float: right;
+  }
+  
+  #balloonMap{
+    display: none;
+  }
+  
+  #header-index .feature-image {
+    height: 300px;
+  }
+  
+  .menu{
+    padding: 20px;
+    z-index: 101;
+  }
+
+  .menu .logo {
+    width: 160px;
+    height: 40px;
+  }
+
+  #header-index .feature-image .play_button {
+    left: 50%;
+    margin-left: -100px;
+  }
+
+  #header-contact .header-content {
+    margin-top: 50px;
+  }
 }

@@ -148,7 +148,7 @@ function person_shortcode($atts) {
     'phone' => ''
   ), $atts);
   
-  $departments = explode("|", $a['description']);
+  $departments = explode("|", $a['department']);
   $links = explode("|", $a['link']);
   $deps = "";
   for($i = 0; $i < count($departments); $i++){
@@ -160,7 +160,7 @@ function person_shortcode($atts) {
   <div class="picture" style="background-image: url('.$a['picture'].')"></div>
   <div class="name">'.$a['name'].'</div>
   <div class="description">'.substr($deps, 0, -3).'</div>
-  <div class="department">'.$a['department'].'</div>
+  <div class="department">'.$a['description'].'</div>
   <div class="email"><a href="mailto: '.$a['email'].'">Email: '.$a['email'].'</a></div>
   <div class="phone">Ph: '.$a['phone'].'</div>
 </div>';

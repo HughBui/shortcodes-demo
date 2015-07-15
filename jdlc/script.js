@@ -474,12 +474,11 @@ window.onresize = function(event) {
 function toggleMenu(){
 	var burger = document.getElementById('burger');
 	if (burger.src.indexOf('hamburger_icon.png')!= -1) {
-		burger.src  = './static/balloon.png';
+		burger.src  = templateUrl + '/static/close_menu_icon.png';
 	} else {
-	   burger.src = './static/hamburger_icon.png';
+	   burger.src = templateUrl +'/static/hamburger_icon.png';
 	}
-		alert(burger.src);
-	
+
 	var menu = document.getElementById("menu-part");
 	if(menu.style.display == "none" || menu.style.display == ""){
 		menu.style.display = "block";

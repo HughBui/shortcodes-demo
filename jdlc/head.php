@@ -7,6 +7,9 @@
     <script src="<?php echo get_template_directory_uri() ?>/script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo get_static_uri('icomoon.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo get_static_uri('gramercy.css'); ?>" type="text/css">
+    <script type="text/javascript">
+      var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+    </script>
     <style type="text/css">
       @font-face {
         font-family: Georgia;
