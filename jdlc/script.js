@@ -462,5 +462,28 @@ window.onload = function(event) {
 }
 
 window.onresize = function(event) {
+  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if(width > 850){
+	document.getElementById("menu-part").style.display = "block";
+  }else{
+	document.getElementById("menu-part").style.display = "none";
+  }
   relocateMap();
+}
+
+function toggleMenu(){
+	var burger = document.getElementById('burger');
+	if (burger.src.indexOf('hamburger_icon.png')!= -1) {
+		burger.src  = './static/balloon.png';
+	} else {
+	   burger.src = './static/hamburger_icon.png';
+	}
+		alert(burger.src);
+	
+	var menu = document.getElementById("menu-part");
+	if(menu.style.display == "none" || menu.style.display == ""){
+		menu.style.display = "block";
+	}else{
+		menu.style.display = "none";
+	}
 }
