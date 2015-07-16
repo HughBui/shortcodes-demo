@@ -422,16 +422,25 @@ function showTag(index){
 }
 
 function hideTag(index){
-  setTimeout(function(){ 
-    var tags = document.getElementsByClassName("tag");
-    fadeOut(tags[index], 200); 
-  }, 300);
+  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if(width > 850){
+	  setTimeout(function(){ 
+		var tags = document.getElementsByClassName("tag");
+		fadeOut(tags[index], 200); 
+	  }, 300);
+  }else{
+	setTimeout(function(){ 
+		var tags = document.getElementsByClassName("tag");
+		fadeOut(tags[index], 200); 
+	  }, 1000);
+  }
 }
 
 function relocateMap(){
   var mapWidth = document.getElementById("map").offsetWidth;
   var mapHeight = document.getElementById("map").offsetHeight;
   var balloonMap = document.getElementById("balloonMap");
+  var spans = document.getElementsByClassName("balloon-span");
   if(mapWidth > 812){
     balloonMap.style.width = "812px";
     balloonMap.style.height = "400px";
@@ -440,6 +449,11 @@ function relocateMap(){
     balloonMap.style.width = mapWidth + "px";
     balloonMap.style.height = mapWidth * 572 / 1153 + "px";
     balloonMap.style.marginTop = (mapHeight - (mapWidth * 572 / 1153))/2 + "px";
+	
+	spans[0].style.left = "80%";
+	spans[0].style.top = "85%";
+	spans[1].style.left = "80%";
+	spans[1].style.top = "99%";
   }
   
   showBalloon();
@@ -484,5 +498,12 @@ function toggleMenu(){
 		menu.style.display = "block";
 	}else{
 		menu.style.display = "none";
+	}
+}
+
+function balloonGo(link){
+	width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	if(width > 850){
+		window.location.href = link;
 	}
 }
