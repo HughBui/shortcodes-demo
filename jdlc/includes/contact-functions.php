@@ -50,20 +50,28 @@ function contact_item_shortcode($attr){
     'image' => null,
     'name' => 'Set Name in the shortcode',
     'facility' => 'SET FACILITY IN SHORTCODE',
+	'link' => '',
     'email' => null,
     'phone' => null,
   ), $attr);
   // set caps where required
   $a['facility'] = strtoupper($a['facility']);
-  return <<<HTML
+  
+  $departments = explode("|", $a['facility']);
+  $links = explode("|", $a['link']);
+  $deps = "";
+  for($i = 0; $i < count($departments); $i++){
+	$deps .= '<span '.(trim($links[$i]) == '' || isset($links[$i]) == false ? "" : "style=\"cursor: pointer;\" onclick=\"window.location='".trim($links[$i])."'\"").'>'.trim($departments[$i]).'</span> & ';
+  }
+  
+  return '
     <div class="contact-item">
-      <div class="contact-image" style="background-image: url('{$a['image']}')"></div>
-      <div class="contact-meta contact-name">{$a['name']}</div>
-      <div class="contact-meta contact-facility">{$a['facility']}</div>
-      <div class="contact-meta contact-email"><a href="mailto: {$a['email']}">Email: {$a['email']}</a></div>
-      <div class="contact-meta contact-phone">Ph: {$a['phone']}</div>
-    </div>
-HTML;
+      <div class="contact-image" style="background-image: url('.$a['image'].')"></div>
+      <div class="contact-meta contact-name">'.$a['name'].'</div>
+      <div class="contact-meta contact-facility">'.substr($deps, 0, -3).'</div>
+      <div class="contact-meta contact-email"><a href="mailto: '.$a['email'].'">Email: '.$a['email'].'</a></div>
+      <div class="contact-meta contact-phone">Ph: '.$a['phone'].'</div>
+    </div>';
 }
 
 add_shortcode('contact-list', 'contact_list_shortcode');
