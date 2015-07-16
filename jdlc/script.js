@@ -473,6 +473,11 @@ function showBalloon(index){
 
 window.onload = function(event) {
   relocateMap();
+  var jdlBio = document.getElementById("jdlBio");
+  if (jdlBio != null) {
+    jdlBio.innerHTML = toTitleCase(jdlBio.innerHTML);
+  }
+
 }
 
 window.onresize = function(event) {
@@ -506,4 +511,9 @@ function balloonGo(link){
 	if(width > 850){
 		window.location.href = link;
 	}
+}
+
+function toTitleCase(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }

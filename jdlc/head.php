@@ -1,6 +1,6 @@
 <html <?php language_attributes(); ?>>
   <head>
-  <title><?php wp_title(); ?></title>
+  <title><?php wp_title(''); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>" type="text/css">    
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">

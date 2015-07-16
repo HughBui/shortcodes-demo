@@ -24,7 +24,7 @@
     $lbID = jdlc_generate_html_id();
     $btn = '[lightbox_launcher id="'.$lbID.'" class="play_button"]<div class="play_button" style="background-image: url('.get_static_uri('play-button-white.png').')"></div>[/lightbox_launcher]';
     $btn .= '[lightbox id="'.$lbID.'"]'.lightbox_content_helper_youtube($yt_link).'[/lightbox]';
-    echo parse_shortcode_content($btn);
+    echo $yt_link == "" ? "<p><br/></p>" : parse_shortcode_content($btn);
   ?>
   <div class="description"><?php echo strtoupper(get_post_custom_values('description')[0]); ?></div>
 </div>

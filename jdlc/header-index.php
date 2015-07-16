@@ -12,7 +12,7 @@
   echo parse_shortcode_content($btn);
 ?>
 </div>
-<div class="heading_text" style="border: 1px solid red;">
+<div class="heading_text">
   John de Laeter Centre is a collaborative research venture involving Curtin University,
   The University of Western Australia, the CSIRO and the geological survey of WA.
 </div>

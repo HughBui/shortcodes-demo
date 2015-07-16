@@ -852,7 +852,7 @@ Text Domain: jdlc
   flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
-  min-width: 400px;
+  width: 90%;
   max-width: 650px;
   margin: 60px auto;
 }
@@ -881,6 +881,7 @@ Text Domain: jdlc
   margin-bottom: 5px;
   font-size: 20px;
 }
+
 /* line 147, ../src/css/_home.sass */
 #home_content .in_honour_of .text .content {
   color: #747474;
@@ -1815,7 +1816,7 @@ body #delimiter {
 #map{
   border-style:solid;
   border-width:1px;
-  border-color:red;
+  border-color:transparent;
   position: relative;
 }
 
@@ -1826,9 +1827,11 @@ body #delimiter {
 
 #balloonMap span{
   position: absolute; 
-  margin-top:-30px; 
-  margin-left:-12px;
   width: 133px;
+  margin-top:-32px; 
+  margin-left:-11px;
+  pointer-events: none;
+
 }
 
 .balloon {  
@@ -1836,6 +1839,7 @@ body #delimiter {
   display: none;
   margin-top: 5px;
   cursor: pointer;
+  pointer-events: all;
   -webkit-transition: margin 0.2s ease-out; 
   -moz-transition: margin 0.2s ease-out; 
   -o-transition: margin 0.2s ease-out; 
@@ -1865,15 +1869,15 @@ a{
 }
 
 #footer .gramercy-footer .gramercy-footer-container .gramercy-link .gramercy-icon:hover {
--webkit-transform: rotate(360deg);
--moz-transform: rotate(360deg);
--o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 
 #footer .gramercy-footer .gramercy-footer-container .gramercy-link .gramercy-icon {
--webkit-transition: all 0.5s ease-out;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 850px) {
@@ -1882,127 +1886,126 @@ a{
   }
   
   #balloonMap span{
-	-ms-transform: scale(0.5,0.5); /* IE 9 */
-    -webkit-transform: scale(0.5,0.5); /* Safari */
-    transform: scale(0.5,0.5);
-	margin-left: -40px;
-	margin-top: -25px;
-  }
-  
-  #menu-part{
-    display: none;
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    margin-left: -135px;
-    z-index: 101;
-  }
+   -ms-transform: scale(0.5,0.5); /* IE 9 */
+   -webkit-transform: scale(0.5,0.5); /* Safari */
+   transform: scale(0.5,0.5);
+   margin-left: -40px;
+   margin-top: -25px;
+ }
 
-  #menu-part span a,
-  #menu-part span{
-    border-top: 1px solid #747474;
-    border-left: 1px solid #747474;
-    border-right: 1px solid #747474;
-    background-color: white;
-    display: block;
-    width: 260px;
-    line-height: 70px;
-    text-align: center;
-    padding: 0px;
-  }
+ #menu-part{
+  display: none;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  margin-left: -135px;
+  z-index: 101;
+}
 
-  #menu-part span:first-child a,
-  #menu-part span:first-child{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
+#menu-part span a,
+#menu-part span{
+  border-top: 1px solid #747474;
+  border-left: 1px solid #747474;
+  border-right: 1px solid #747474;
+  background-color: white;
+  display: block;
+  width: 260px;
+  line-height: 70px;
+  text-align: center;
+  padding: 0px;
+}
 
-  #menu-part span:last-child a,
-  #menu-part span:last-child{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom: 1px solid #747474;
-  }
+#menu-part span:first-child a,
+#menu-part span:first-child{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
-  #menu-part span a{
-    color: #747474;
-  }
+#menu-part span:last-child a,
+#menu-part span:last-child{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid #747474;
+}
 
-  #menu-part span.selected,
-  #menu-part span:hover {
-    background-color: #747474;
-  }
-  
-  #menu-part span:hover a{
-    color: white;
-  }
+#menu-part span a{
+  color: #747474;
+}
 
-  #menu-part span.selected a,
-  #menu-part span a:hover{
-    color: white;
-    background-color: #747474;
-  }
+#menu-part span.selected,
+#menu-part span:hover {
+  background-color: #747474;
+}
 
-  #burger-part{
-    display: block;
-    margin-top: 20px;
-    float: right;
-  }
-  
-  #balloonMap a{
+#menu-part span:hover a{
+  color: white;
+}
+
+#menu-part span.selected a,
+#menu-part span a:hover{
+  color: white;
+  background-color: #747474;
+}
+
+#burger-part{
+  display: block;
+  margin-top: 20px;
+  float: right;
+}
+
+#balloonMap a{
 	pointer-events: none;
-  }
-  
-  #header-index .feature-image {
+}
+
+#header-index .feature-image {
 	height: 350px;
-  }
-  
-  .menu{
-    padding: 20px;
-    z-index: 101;
-  }
+}
 
-  .menu .logo {
-    width: 160px;
-    height: 40px;
-	background-image: url(./static/logo-chevron.jpg) !important;
-  }
+.menu{
+  padding: 20px;
+  z-index: 101;
+}
 
-  #header-index .feature-image .play_button {
-    left: 50%;
-	width: 50px;
-    margin-left: -25px;
-  }
-  
-  #header-index .feature-image .play_button .play_button_text{
+.menu .logo {
+  width: 160px;
+  height: 40px;
+  background-image: url(./static/jdlc-logo-top.png) !important;
+}
+
+#header-index .feature-image .play_button {
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+}
+
+#header-index .feature-image .play_button .play_button_text{
 	display: none;
-  }
-  
-  #header-index .heading_text {
+}
+
+#header-index .heading_text {
 	padding: 10px;
 	font-size: 17px;
-  }
+}
 
-  #header-contact .header-content {
-    margin-top: 50px;
-  }
-  
-  #main.facility .image-grid{
+#header-contact .header-content {
+  margin-top: 50px;
+}
+
+#main.facility .image-grid{
 	height: 200px;
-  }
-  
-  #main.facility .grid,
-  #main.facility .section.techniques .grid_item,
-  #main.facility .section.applications .grid_item ,
-  #main.facility .grid .grid_item {
+}
+
+#main.facility .grid,
+#main.facility .section.techniques .grid_item,
+#main.facility .section.applications .grid_item ,
+#main.facility .grid .grid_item {
 	margin: 10px auto;
 	padding: 0px;
-	border: 1px solid red;
-  }
-  
-  #main.facility .section.techniques .grid_item,
-  #main.facility .section.applications .grid_item ,
-  #main.facility .grid .grid_item {
+}
+
+#main.facility .section.techniques .grid_item,
+#main.facility .section.applications .grid_item ,
+#main.facility .grid .grid_item {
 	padding: 10px;
-  }
- }
+}
+}
