@@ -41,7 +41,7 @@
         </span>
       </div>
       <div class="copyright">
-        <span class="copyright">Copyright 2015 | John de Laeter Center</span> 
+        <span class="copyright">Copyright 2015 | John de Laeter Centre</span> 
       </div>
     </div>
   </div>
