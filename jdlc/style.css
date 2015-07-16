@@ -586,8 +586,8 @@ Text Domain: jdlc
 }
 /* line 133, ../src/css/_facilities.sass */
 #main.facility .image-grid {
-  width: 750px;
-  padding: 0 25px;
+  width: 100%;
+  padding: 0px;
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
@@ -601,8 +601,10 @@ Text Domain: jdlc
 }
 /* line 141, ../src/css/_facilities.sass */
 #main.facility .image-grid .image_grid_item {
-  width: 40%;
-  height: 200px;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 650px;
   flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -1401,8 +1403,9 @@ img.perth-skyline {
 #header-index .feature-image .play_button {
   position: absolute;
   bottom: 10px;
-  right: 20%;
+  left: 50%;
   width: 200px;
+  margin-left: 200px;
 }
 /* line 94, ../src/css/_headers.sass */
 #header-index .feature-image .play_button img {
@@ -1812,7 +1815,7 @@ body #delimiter {
 #map{
   border-style:solid;
   border-width:1px;
-  border-color:transparent;
+  border-color:red;
   position: relative;
 }
 
@@ -1861,11 +1864,31 @@ a{
   z-index: 101;
 }
 
+#footer .gramercy-footer .gramercy-footer-container .gramercy-link .gramercy-icon:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+}
+
+#footer .gramercy-footer .gramercy-footer-container .gramercy-link .gramercy-icon {
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+
 @media screen and (max-width: 850px) {
   #map{
-    margin-top: 50px !important;
+    margin-top: 20px !important;
   }
-
+  
+  #balloonMap span{
+	-ms-transform: scale(0.5,0.5); /* IE 9 */
+    -webkit-transform: scale(0.5,0.5); /* Safari */
+    transform: scale(0.5,0.5);
+	margin-left: -40px;
+	margin-top: -25px;
+  }
+  
   #menu-part{
     display: none;
     position: absolute;
@@ -1926,12 +1949,12 @@ a{
     float: right;
   }
   
-  #balloonMap{
-    display: none;
+  #balloonMap a{
+	pointer-events: none;
   }
   
   #header-index .feature-image {
-    height: 300px;
+	height: 350px;
   }
   
   .menu{
@@ -1942,14 +1965,44 @@ a{
   .menu .logo {
     width: 160px;
     height: 40px;
+	background-image: url(./static/logo-chevron.jpg) !important;
   }
 
   #header-index .feature-image .play_button {
     left: 50%;
-    margin-left: -100px;
+	width: 50px;
+    margin-left: -25px;
+  }
+  
+  #header-index .feature-image .play_button .play_button_text{
+	display: none;
+  }
+  
+  #header-index .heading_text {
+	padding: 10px;
+	font-size: 17px;
   }
 
   #header-contact .header-content {
     margin-top: 50px;
   }
-}
+  
+  #main.facility .image-grid{
+	height: 200px;
+  }
+  
+  #main.facility .grid,
+  #main.facility .section.techniques .grid_item,
+  #main.facility .section.applications .grid_item ,
+  #main.facility .grid .grid_item {
+	margin: 10px auto;
+	padding: 0px;
+	border: 1px solid red;
+  }
+  
+  #main.facility .section.techniques .grid_item,
+  #main.facility .section.applications .grid_item ,
+  #main.facility .grid .grid_item {
+	padding: 10px;
+  }
+ }
