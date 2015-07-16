@@ -14,15 +14,15 @@
 	    array("x" => "80",		"y" => "10",	"text" => "GHF",				"link" => $templateDir."/geohistory-facility-ghf/"),
 	    array("x" => "86",		"y" => "2.5",	"text" => "SMS",				"link" => $templateDir."/selfrag-mineral-separation-facility-sms/"),
 	    array("x" => "86.7",	"y" => "47",	"text" => "WAAIF",				"link" => $templateDir."/western-australian-argon-isotope-facility-waaif/"),
-	    array("x" => "77",	"y" => "60",	"text" => "TRACE<br/>Bldg.206",		"link" => $templateDir."/trace-research-advanced-clean-environment-facility-trace/"),
-	    array("x" => "77",	"y" => "70",	"text" => "WA-OIG<br/>Bldg.500",	"link" => $templateDir."/wa-organic-and-isotope-geochemistry-facility-wa-oig/"),
+	    array("x" => "95",	"y" => "65",	"text" => "TRACE<br/>Bldg.206",		"link" => $templateDir."/trace-research-advanced-clean-environment-facility-trace/"),
+	    array("x" => "95",	"y" => "75",	"text" => "WA-OIG<br/>Bldg.500",	"link" => $templateDir."/wa-organic-and-isotope-geochemistry-facility-wa-oig/"),
 	);
 	for ($i = count($balloons)-1; $i >= 0 ; $i--) { 
 ?>
-	<span style="left: <?php echo $balloons[$i]["x"]; ?>%; top: <?php echo $balloons[$i]["y"]; ?>%;">
+	<span class="balloon-span" style="left: <?php echo $balloons[$i]["x"]; ?>%; top: <?php echo $balloons[$i]["y"]; ?>%;">
 		<img class="balloon" src="<?php echo ($i == 1 ? get_static_uri('yellow-balloon.png') : get_static_uri('balloon.png')); ?>" 
 		onmouseenter="showTag(<?php echo count($balloons)-1-$i; ?>)" onmouseout="hideTag(<?php echo count($balloons)-1-$i; ?>)"
-		onclick="window.location.href ='<?php echo $balloons[$i]["link"]; ?>';"/>
+		onclick="balloonGo('<?php echo $balloons[$i]["link"]; ?>');"/>
 		<div class="tag" style="background-image: url(<?php echo get_static_uri('tag.png'); ?>); background-repeat: no-repeat;">
 			<?php echo $balloons[$i]["text"]; ?>
 		</div>
