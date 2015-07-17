@@ -477,7 +477,6 @@ window.onload = function(event) {
   if (jdlBio != null) {
     jdlBio.innerHTML = toTitleCase(jdlBio.innerHTML);
   }
-
 }
 
 window.onresize = function(event) {
