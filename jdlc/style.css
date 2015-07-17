@@ -1969,7 +1969,8 @@ a{
 .menu .logo {
   width: 160px;
   height: 40px;
-  background-image: url(./static/jdlc-logo-top.png) !important;
+  background-image: url(./static/JDLC-mobile-icon.png) !important;
+  background-size: contain;
 }
 
 #header-index .feature-image .play_button {
