@@ -12,15 +12,15 @@ function research_glyph($image, $label){
 function fields_of_research_shortcode(){
   return '<div class="fields-of-study">
     <div class="research-title">FIELDS OF RESEARCH</div>
-    <div class="research-sub">We host over $25M in world-class analytical and mass spectrometry infrustructure in key facilities supporting research in:</div>
+    <!--<div class="research-sub">We host over $25M in world-class analytical and mass spectrometry infrustructure in key facilities supporting research in:</div>-->
     <div class="glyphs">'
-    . research_glyph('globe-icon.jpg', 'Geological Sciences')
-    . research_glyph('recycle-icon.jpg','Environmental Sciences')
-    . research_glyph('atom-icon.jpg','Economic Geology')
-    . research_glyph('gene-icon.jpg','Forensic Sciences')
-    . research_glyph('diamond-icon.jpg','Isotope Metrology')
-    . research_glyph('wheel-icon.jpg','Marine Sciences')
-    . research_glyph('nuke-icon.jpg','Nuclear Sciences')
+    . research_glyph('globe-icon.jpg', 'Planetary Science')
+    . research_glyph('recycle-icon.jpg','Environment Science')
+    . research_glyph('atom-icon.jpg','Geochronology<br/>&nbsp;')
+    . research_glyph('gene-icon.jpg','Forensic Science')
+    . research_glyph('diamond-icon.jpg','Economic Geology')
+    . research_glyph('wheel-icon.jpg','Marine<br/>Science')
+    . research_glyph('nuke-icon.jpg','Material Science')
     . '</div></div>';
 }
 
@@ -75,7 +75,7 @@ function collaborate_map_shortcode($content = null){
   return <<<HTML
     <div class="map-view" style="background-image: url('{$background_im}');">
       <div class="map-container">{$pins}<img class="map" src="{$map_im}"></img></div>
-      <div class="map-tagline">WE COLLABORATE WITH INTERNATIONAL ORGANISATIONS AROUND THE WORLD</div>
+      <div class="map-tagline">WE COLLABORATE WITH LEADING INSTITUTIONS AND ORGANISATIONS</div>
       <div class="client-list">{$inner}</div>
     </div>
 HTML;
