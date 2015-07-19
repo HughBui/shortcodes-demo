@@ -52,6 +52,8 @@ jdlcLaunchLightbox = function(id) {
   lightbox.style.top = top + 'px';
   lightbox.style.left = left + 'px';
   lbBackground = document.getElementById('lightbox_background');
+  document.getElementsByClassName("yt")[0].style.display = "block";
+  document.getElementsByClassName("yt-iframe")[0].style.display = "block";
   return lbBackground.style.display = 'inline-block';
 };
 
@@ -416,12 +418,17 @@ function fadeOut( elem, ms )
 function showTag(index){
   setTimeout(function(){ 
     var tags = document.getElementsByClassName("tag");
+    var balloons = document.getElementsByClassName("balloon");
+    balloons[index].style.marginTop = "2px";
     fadeIn(tags[index], 200); 
   }, 210);
 
 }
 
 function hideTag(index){
+  var balloons = document.getElementsByClassName("balloon");
+  balloons[index].style.marginTop = "5px";
+
   width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   if(width > 850){
 	  setTimeout(function(){ 
@@ -466,27 +473,21 @@ function showBalloon(index){
     return;
   }
   balloons[index].style.display = "block";
+  dropBalloon(balloons[index], -5);
   setTimeout(function(){ 
     showBalloon(index-1); 
   }, 500);
 }
 
-window.onload = function(event) {
-  relocateMap();
-  var jdlBio = document.getElementById("jdlBio");
-  if (jdlBio != null) {
-    jdlBio.innerHTML = toTitleCase(jdlBio.innerHTML);
+function dropBalloon(balloon, marginTop){
+  if (marginTop == 6){
+    balloon.style.marginTop = "none";
+    return;
   }
-}
-
-window.onresize = function(event) {
-  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if(width > 850){
-	document.getElementById("menu-part").style.display = "block";
-  }else{
-	document.getElementById("menu-part").style.display = "none";
-  }
-  relocateMap();
+  balloon.style.marginTop = marginTop + "px";
+  setTimeout(function(){ 
+    dropBalloon(balloon, marginTop + 1); 
+  }, 10);
 }
 
 function toggleMenu(){
@@ -514,5 +515,31 @@ function balloonGo(link){
 
 function toTitleCase(str)
 {
-    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}).replace("De", "de");
+}
+
+function openFooterLinksNewTab(){
+    var links = document.getElementsByClassName("menu-item-type-custom");
+    for (var i = 0; i < links.length; i++){
+        links[i].firstChild.setAttribute("target", "_blank");
+    }
+}
+
+window.onload = function(event) {
+  var jdlBio = document.getElementById("jdlBio");
+  if (jdlBio != null) {
+    jdlBio.innerHTML = toTitleCase(jdlBio.innerHTML);
+  }
+  openFooterLinksNewTab();
+  relocateMap();
+}
+
+window.onresize = function(event) {
+  width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if(width > 850){
+  document.getElementById("menu-part").style.display = "block";
+  }else{
+  document.getElementById("menu-part").style.display = "none";
+  }
+  relocateMap();
 }

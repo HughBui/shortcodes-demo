@@ -4,7 +4,8 @@ function instrument_list_shortcode() {
   $posts = get_posts(array(
     'post_type' => 'instrument',
     'numberposts' => -1,
-    'orderby' => 'title'
+    'orderby' => 'title',
+    'order'   => 'ASC',
   ));
   $returnString = '<div class="instruments" data-count="'.count($posts).'">';
   foreach ($posts as $post) {
@@ -20,7 +21,7 @@ function instrument_list_shortcode() {
         <div class="desc">'.get_post_meta($post->ID, 'description', true).'</div>
       [/lightbox_launcher]
       [lightbox id="'.$id.'"]
-        <div class="left">
+        <div class="left" style="width: 330px">
           <h1>'.strtoupper(get_post_meta($post->ID, 'title', true)).'</h1>
           <h2>'.strtoupper(get_post_meta($post->ID, 'facility', true)).'</h2>
           <div class="detail">Manufacturer: '.get_post_meta($post->ID, 'manufacturer', true).'</div>
@@ -33,15 +34,15 @@ function instrument_list_shortcode() {
           $returnString .= '<div class="lbLinkContainer">
           <a class="lbLink" href="'.get_post_meta($post->ID,'link_url',true).'">'.strtoupper(get_post_meta($post->ID, 'link_label',true)).'</a></div>';
         $returnString .= '</div>
-        <div class="right">
-          <div class="image_select" id="'.$imId.'">
+        <div class="right" style="padding-bottom: 3px; width: 660px;">
+          <div class="image_select" id="'.$imId.'" style="padding-bottom: 3px;">
             <div class="feature"></div>
-            <div class="others">';
+            <div class="others" style="padding-top: 50px">';
               for ($i = 0; $i < 3; $i++) {
                 $im = $images[$i];
                 if ($im == '') { continue; }
                 $returnString .= '
-                      <div style="background-image: url('.$im.')" onclick="jdlcUpdateFeaturedImage(\''.$imId.'\', '.$i.');"></div>';
+                      <div style="background-image: url('.$im.'); margin-bottom: -40px;" onclick="jdlcUpdateFeaturedImage(\''.$imId.'\', '.$i.');"></div>';
               }
             $returnString .= '
             </div>

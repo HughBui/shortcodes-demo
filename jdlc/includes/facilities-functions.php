@@ -121,10 +121,10 @@ function general_slider_shortcode($atts, $content) {
   $sliderId = jdlc_generate_html_id();
   return '<div class="slider '.$a['class'].'" id="'.$sliderId.'">
     <div class="chevron_holder">
+    '.parse_shortcode_content($content).'
     <div class="next icon-chevron-right" onclick="sliderAction(1, \''.$sliderId.'\');"></div>
     <div class="prev icon-chevron-left" onclick="sliderAction(-1, \''.$sliderId.'\');"></div>
     </div>
-    '.parse_shortcode_content($content).'
   </div>
   <script type="text/javascript">
     initialiseSlider("'.$sliderId.'");
@@ -159,8 +159,8 @@ function person_shortcode($atts) {
 <div class="person">
   <div class="picture" style="background-image: url('.$a['picture'].')"></div>
   <div class="name">'.$a['name'].'</div>
-  <div class="description">'.substr($deps, 0, -3).'</div>
-  <div class="department">'.$a['description'].'</div>
+  <div class="description">'.$a['description'].'</div>
+  <div class="department">'.substr($deps, 0, -3).'</div>
   <div class="email"><a href="mailto: '.$a['email'].'">Email: '.$a['email'].'</a></div>
   <div class="phone">Ph: '.$a['phone'].'</div>
 </div>';

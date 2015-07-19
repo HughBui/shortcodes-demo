@@ -129,7 +129,7 @@ Text Domain: jdlc
   background-color: white;
   box-shadow: 0 0 2px 0 grey;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   max-height: 800px;
   opacity: 1;
   visibility: hidden;
@@ -162,11 +162,13 @@ Text Domain: jdlc
 /* line 44, ../src/css/_lightbox.sass */
 .lightbox .lightbox-content .yt {
   padding: 40px 30px 30px 30px;
+  display: none;
 }
 /* line 47, ../src/css/_lightbox.sass */
 .lightbox .lightbox-content .yt .yt-iframe {
   width: 100%;
   height: 75%;
+  display: none;
 }
 /* line 51, ../src/css/_lightbox.sass */
 .lightbox .lightbox-content .left {
@@ -188,17 +190,18 @@ Text Domain: jdlc
 }
 /* line 67, ../src/css/_lightbox.sass */
 .lightbox .lightbox-content .left .lbLinkContainer .lbLink {
-  margin: 15px auto;
-  padding: 10px 20px;
+  margin: 5px auto;
+  padding: 10px 0px;
   text-align: center;
   font-family: Grotesque-med;
   color: #747474;
   border: 1px solid #747474;
   text-decoration: none;
+  display: block;
 }
 /* line 76, ../src/css/_lightbox.sass */
-.lightbox .lightbox-content .left .lbLinkContainer .lbLink:hover {
-  color: white;
+.lightbox .lightbox-content .left .lbLinkContainer a.lbLink:hover {
+  color: white !important;
   background: #747474;
 }
 /* line 80, ../src/css/_lightbox.sass */
@@ -632,6 +635,7 @@ Text Domain: jdlc
 /* line 162, ../src/css/_facilities.sass */
 #main.facility .general_slider_section {
   padding: 50px 20px;
+  height: 1000px;
 }
 /* line 165, ../src/css/_facilities.sass */
 #main.facility .general_slider_section .slider {
@@ -818,18 +822,18 @@ Text Domain: jdlc
 }
 /* line 97, ../src/css/_home.sass */
 .map-view .client-list {
-  max-width: 900px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px;
 }
 /* line 102, ../src/css/_home.sass */
 .map-view .client-list .client-cell {
   display: inline-block;
   background-color: white;
   border-radius: 6px;
-  padding: 30px;
   margin: 10px;
-  width: 130px;
+  padding: 30px;
   height: 50px;
 }
 /* line 111, ../src/css/_home.sass */
@@ -853,7 +857,7 @@ Text Domain: jdlc
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   width: 90%;
-  max-width: 650px;
+  max-width: 1000px;
   margin: 60px auto;
 }
 /* line 129, ../src/css/_home.sass */
@@ -862,7 +866,7 @@ Text Domain: jdlc
   -webkit-flex: 1;
   flex: 1;
   background-position: center;
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
   margin: 0 20px;
 }
@@ -946,6 +950,7 @@ Text Domain: jdlc
 /* line 25, ../src/css/_contact.sass */
 .contact-highlight .contact-bio-container .contact-desc {
   font-family: Georgia;
+  font-size: 15px;
   color: #7D7D7D;
 }
 /* line 29, ../src/css/_contact.sass */
@@ -1050,18 +1055,20 @@ Text Domain: jdlc
 /* line 59, ../src/css/_contact.sass */
 .contact-item .contact-name, .contact-highlight .contact-name {
   font-family: Grotesque-med;
-  font-size: 22px;
+  font-size: 28px;
 }
 /* line 63, ../src/css/_contact.sass */
 .contact-item .contact-facility, .contact-item .contact-title, .contact-highlight .contact-facility, .contact-highlight .contact-title {
   font-family: Grotesque-med;
-  color: #747474;
+  font-size: 22px;
+  color: #000;
 }
 /* line 67, ../src/css/_contact.sass */
-.contact-item .contact-phone, .contact-item .contact-email, .contact-highlight .contact-phone, .contact-highlight .contact-email {
+.contact-item .contact-phone, .contact-item .contact-email, .contact-highlight .contact-phone, .contact-highlight .contact-email a {
   font-family: Georgia;
   font-weight: 300;
-  color: #747474;
+  font-size: 20px;'
+  color: #747474 !important;
 }
 
 /* line 72, ../src/css/_contact.sass */
@@ -1389,7 +1396,7 @@ img.perth-skyline {
   margin: 0 auto;
   padding: 80px 40px;
   font-size: 20px;
-  max-width: 750px;
+  max-width: 1000px;
 }
 /* line 80, ../src/css/_headers.sass */
 #header-index .feature-image {
@@ -1954,11 +1961,11 @@ a{
 }
 
 #balloonMap a{
-	pointer-events: none;
+ pointer-events: none;
 }
 
 #header-index .feature-image {
-	height: 350px;
+ height: 350px;
 }
 
 .menu{
@@ -1980,12 +1987,12 @@ a{
 }
 
 #header-index .feature-image .play_button .play_button_text{
-	display: none;
+ display: none;
 }
 
 #header-index .heading_text {
-	padding: 10px;
-	font-size: 17px;
+ padding: 10px;
+ font-size: 17px;
 }
 
 #header-contact .header-content {
@@ -1993,20 +2000,40 @@ a{
 }
 
 #main.facility .image-grid{
-	height: 200px;
+ height: 200px;
 }
 
 #main.facility .grid,
 #main.facility .section.techniques .grid_item,
 #main.facility .section.applications .grid_item ,
 #main.facility .grid .grid_item {
-	margin: 10px auto;
-	padding: 0px;
+ margin: 10px auto;
+ padding: 0px;
 }
 
 #main.facility .section.techniques .grid_item,
 #main.facility .section.applications .grid_item ,
 #main.facility .grid .grid_item {
-	padding: 10px;
+ padding: 10px;
 }
+
+  .map-view .client-list .client-cell {
+    width: 130px;
+  }
+
+  .contact-image-container-2{
+    width: 100% !important;
+    height: 140px;
+  }
+}
+
+
+@media screen and (min-width: 850px) {
+  .fields-of-study .glyphs .glyph {
+    margin: 0 20px;
+  }
+
+  .map-view .client-list .client-cell {
+    width: 170px;
+  }
 }

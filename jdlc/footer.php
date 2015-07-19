@@ -23,9 +23,9 @@
         <div>
           <span>Connect to us Via social:</span>
           <span class="social-links">
-          <span class="social-linkedin"><a href="http://www.linkedin.com/groups?home=&gid=6689207"><img src="<?php echo get_static_uri('social-linkedin.png'); ?>"></img></a></span>
-          <span class="social-twitter"><a href="https://twitter.com/JDLCentre"><img src="<?php echo get_static_uri('social-twitter.png'); ?>"></img></a></span>
-          <span class="social-youtube"><a href=""><img src="<?php echo get_static_uri('social-youtube.png'); ?>"></img></a></span>
+          <span class="social-linkedin"><a target="_blank" href="http://www.linkedin.com/groups?home=&gid=6689207"><img src="<?php echo get_static_uri('social-linkedin.png'); ?>"></img></a></span>
+          <span class="social-twitter"><a target="_blank" href="https://twitter.com/JDLCentre"><img src="<?php echo get_static_uri('social-twitter.png'); ?>"></img></a></span>
+          <span class="social-youtube"><a target="_blank" href=""><img src="<?php echo get_static_uri('social-youtube.png'); ?>"></img></a></span>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
     <div class="gramercy-footer-container">
       <div class="credit">
         <span class="tagline">Designed By
-          <a class="gramercy-link" href="http://www.gramercystudios.com">
+          <a class="gramercy-link" href="http://www.gramercystudios.com" target="_blank">
             <span class="gramercy-icon"></span>
             <span class="gramercy-logo"></span>
           </a>

@@ -20,7 +20,7 @@ function fields_of_research_shortcode(){
     . research_glyph('gene-icon.jpg','Forensic Science')
     . research_glyph('diamond-icon.jpg','Economic Geology')
     . research_glyph('wheel-icon.jpg','Marine<br/>Science')
-    . research_glyph('nuke-icon.jpg','Material Science')
+    . research_glyph('material-icon.png','Material Science')
     . '</div></div>';
 }
 
@@ -75,7 +75,7 @@ function collaborate_map_shortcode($content = null){
   return <<<HTML
     <div class="map-view" style="background-image: url('{$background_im}');">
       <div class="map-container">{$pins}<img class="map" src="{$map_im}"></img></div>
-      <div class="map-tagline">WE COLLABORATE WITH LEADING INSTITUTIONS AND ORGANISATIONS</div>
+      <div class="map-tagline">WE COLLABORATE WITH LEADING<br/>INSTITUTIONS AND ORGANISATIONS</div>
       <div class="client-list">{$inner}</div>
     </div>
 HTML;
