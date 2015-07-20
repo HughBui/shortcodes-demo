@@ -72,8 +72,17 @@ function collaborate_map_shortcode($content = null){
     . clientmap_pin_helper('96%','91%','New Zealand Centre of Research')
     . clientmap_pin_helper('79%','83%','JDLC');
   $inner = parse_shortcode_content($content);
+  $height = "";
+  $posts = get_posts(array(
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'category_name' => 'Featured',
+    'showposts' => 3));
+  if(count($posts) == 0){
+    $height = "height: 700px;";
+  }
   return <<<HTML
-    <div class="map-view" style="background-image: url('{$background_im}');">
+    <div class="map-view" style="background-image: url('{$background_im}'); {$height}">
       <div class="map-container">{$pins}<img class="map" src="{$map_im}"></img></div>
       <div class="map-tagline">WE COLLABORATE WITH LEADING<br/>INSTITUTIONS AND ORGANISATIONS</div>
       <div class="client-list">{$inner}</div>
@@ -99,6 +108,7 @@ add_shortcode('clientmap','clientmap_shortcode');
 add_shortcode('client', 'clientbox_shortcode');
 
 function homepage_posts_slideshow_shortcode($atts) {
+  $hasPost = false;
   $a = shortcode_atts(array(
     'buttonText' => 'See all news'
   ), $atts);
@@ -108,21 +118,15 @@ function homepage_posts_slideshow_shortcode($atts) {
   $posts = get_posts(array(
     'orderby' => 'date',
     'order' => 'DESC',
-	'category_name' => 'featured',
+    'category_name' => 'Featured',
     'showposts' => 3));
-  $return_string .= "[slide]".multi_article_render_helper($posts)."[/slide]";
-  $posts = get_posts(array(
-    'orderby' => 'date',
-    'order' => 'DESC',
-	'category_name' => 'featured',
-    'showposts' => 3,
-    'offset' => 3));
   if(count($posts) > 0){
-    $return_string .= "[slide]".multi_article_render_helper($posts)."[/slide]";
+    $hasPost = true;
   }
+  $return_string .= "[slide]".multi_article_render_helper($posts)."[/slide]";
   $return_string .= "[/general_slider]";
   $return_string .= '<a class="all_news_button" href="'.get_permalink(get_page_by_path('research')).'">'.$a['buttonText'].'</a>';
-  return parse_shortcode_content($return_string);
+  return $hasPost ? parse_shortcode_content($return_string) : "";
 }
 
 function in_honour_of_shortcode($atts, $content=null) {
