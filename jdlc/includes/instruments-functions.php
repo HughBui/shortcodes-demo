@@ -42,7 +42,7 @@ function instrument_list_shortcode() {
                 $im = $images[$i];
                 if ($im == '') { continue; }
                 $returnString .= '
-                      <div style="background-image: url('.$im.'); margin-bottom: -40px;" onclick="jdlcUpdateFeaturedImage(\''.$imId.'\', '.$i.');"></div>';
+                      <div style="background-image: url('.$im.'); background-size: cover; width: 100px; height: 75px; margin-bottom: -40px;" onclick="jdlcUpdateFeaturedImage(\''.$imId.'\', '.$i.');"></div>';
               }
             $returnString .= '
             </div>
