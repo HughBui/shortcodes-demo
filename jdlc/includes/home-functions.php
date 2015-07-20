@@ -108,11 +108,13 @@ function homepage_posts_slideshow_shortcode($atts) {
   $posts = get_posts(array(
     'orderby' => 'date',
     'order' => 'DESC',
+	'category_name' => 'featured',
     'showposts' => 3));
   $return_string .= "[slide]".multi_article_render_helper($posts)."[/slide]";
   $posts = get_posts(array(
     'orderby' => 'date',
     'order' => 'DESC',
+	'category_name' => 'featured',
     'showposts' => 3,
     'offset' => 3));
   if(count($posts) > 0){
