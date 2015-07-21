@@ -17,12 +17,14 @@ function instrument_list_shortcode() {
     $returnString .= '
       [lightbox_launcher id="'.$id.'" class="instrument"]
         <div class="pic" style="background-image: url('.get_post_meta($post->ID, 'image', true).');"></div>
-        <div class="name">'.strtoupper(get_post_meta($post->ID, 'title', true)).'</div>
+        <div class="name" style="font-size: 16px; line-height: 10px;">'.strtoupper(get_post_meta($post->ID, 'title', true)).'</div>
+		<div class="name" style="font-size: 12px; line-height: 10px; margin-bottom: 20px;">'.strtoupper(get_post_meta($post->ID, 'subtitle', true)).'</div>
         <div class="desc">'.get_post_meta($post->ID, 'description', true).'</div>
       [/lightbox_launcher]
       [lightbox id="'.$id.'"]
         <div class="left" style="width: 330px">
           <h1>'.strtoupper(get_post_meta($post->ID, 'title', true)).'</h1>
+		  <h2>'.strtoupper(get_post_meta($post->ID, 'subtitle', true)).'</h2>
           <h2>'.strtoupper(get_post_meta($post->ID, 'facility', true)).'</h2>
           <div class="detail">Manufacturer: '.get_post_meta($post->ID, 'manufacturer', true).'</div>
           <div class="detail">Model: '.get_post_meta($post->ID, 'model', true).'</div>
