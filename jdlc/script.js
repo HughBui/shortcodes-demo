@@ -234,122 +234,6 @@ sliderAction = function(dir, id) {
 
 
 
-
-
-function fadeIn( elem, ms )
-{
-  if( ! elem )
-    return;
-
-  elem.style.opacity = 0;
-  elem.style.filter = "alpha(opacity=0)";
-  elem.style.display = "inline-block";
-  elem.style.visibility = "visible";
-
-  if( ms )
-  {
-    var opacity = 0;
-    var timer = setInterval( function() {
-      opacity += 50 / ms;
-      if( opacity >= 1 )
-      {
-        clearInterval(timer);
-        opacity = 1;
-      }
-      elem.style.opacity = opacity;
-      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
-    }, 50 );
-  }
-  else
-  {
-    elem.style.opacity = 1;
-    elem.style.filter = "alpha(opacity=1)";
-  }
-}
-
-function fadeOut( elem, ms )
-{
-  if( ! elem )
-    return;
-
-  if( ms )
-  {
-    var opacity = 1;
-    var timer = setInterval( function() {
-      opacity -= 50 / ms;
-      if( opacity <= 0 )
-      {
-        clearInterval(timer);
-        opacity = 0;
-        elem.style.display = "none";
-        elem.style.visibility = "hidden";
-      }
-      elem.style.opacity = opacity;
-      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
-    }, 50 );
-  }
-  else
-  {
-    elem.style.opacity = 0;
-    elem.style.filter = "alpha(opacity=0)";
-    elem.style.display = "none";
-    elem.style.visibility = "hidden";
-  }
-}
-
-function showTag(index){
-  setTimeout(function(){ 
-    var tags = document.getElementsByClassName("tag");
-    fadeIn(tags[index], 200); 
-  }, 210);
-
-}
-
-function hideTag(index){
-  setTimeout(function(){ 
-    var tags = document.getElementsByClassName("tag");
-    fadeOut(tags[index], 200); 
-  }, 300);
-}
-
-function relocateMap(){
-  var mapWidth = document.getElementById("map").offsetWidth;
-  var mapHeight = document.getElementById("map").offsetHeight;
-  var balloonMap = document.getElementById("balloonMap");
-  if(mapWidth > 812){
-    balloonMap.style.width = "812px";
-    balloonMap.style.height = "400px";
-    balloonMap.style.marginLeft = (mapWidth - 812)/2 + "px";
-  }else{
-    balloonMap.style.width = mapWidth + "px";
-    balloonMap.style.height = mapWidth * 572 / 1153 + "px";
-    balloonMap.style.marginTop = (mapHeight - (mapWidth * 572 / 1153))/2 + "px";
-  }
-  
-  showBalloon();
-}
-
-function showBalloon(index){
-  var balloons = document.getElementsByClassName("balloon");
-  index = typeof index !== 'undefined' ? index : balloons.length-1;
-  if(index < 0){
-    return;
-  }
-  balloons[index].style.display = "block";
-  setTimeout(function(){ 
-    showBalloon(index-1); 
-  }, 500);
-}
-
-window.onload = function(event) {
-  relocateMap();
-}
-
-window.onresize = function(event) {
-  relocateMap();
-}
-
-
 /* HUGH ====================================================================*/
 
 
@@ -456,7 +340,9 @@ function relocateMap(){
     balloonMap.style.width = mapWidth + "px";
     balloonMap.style.height = mapWidth * 572 / 1153 + "px";
     balloonMap.style.marginTop = (mapHeight - (mapWidth * 572 / 1153))/2 + "px";
-	
+  }
+  
+  if(mapWidth < 500){
 	spans[0].style.left = "80%";
 	spans[0].style.top = "85%";
 	spans[1].style.left = "80%";
