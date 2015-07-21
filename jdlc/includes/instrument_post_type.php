@@ -30,6 +30,7 @@ function add_instrument_metaboxes(){
   add_meta_box('jdlc_instrument_facility', 'Facility', 'jdlc_instrument_facility', 'instrument', 'normal', 'high');
   add_meta_box('jdlc_instrument_year', 'Year', 'jdlc_instrument_year', 'instrument', 'normal', 'high');
   add_meta_box('jdlc_instrument_title', 'Title', 'jdlc_instrument_title', 'instrument', 'normal', 'high');
+  add_meta_box('jdlc_instrument_subtitle', 'Subtitle', 'jdlc_instrument_subtitle', 'instrument', 'normal', 'high');
   add_meta_box('jdlc_instrument_model', 'Model', 'jdlc_instrument_model', 'instrument', 'normal', 'high');
   add_meta_box('jdlc_instrument_manufacturer', 'Manufacturer', 'jdlc_instrument_manufacturer', 'instrument', 'normal', 'high');
   add_meta_box('jdlc_instrument_room', 'Room', 'jdlc_instrument_room', 'instrument', 'normal', 'high');
@@ -69,6 +70,16 @@ function jdlc_instrument_title(){
   $title = get_post_meta($post->ID, 'title', true);
   echo <<<HTML
     <input type="text" name="jdlc_instrument_title" value="{$title}" class="widefat" />
+HTML;
+}
+
+function jdlc_instrument_subtitle(){
+  global $post;
+  generate_inst_nounce();
+
+  $subtitle = get_post_meta($post->ID, 'subtitle', true);
+  echo <<<HTML
+    <input type="text" name="jdlc_instrument_subtitle" value="{$subtitle}" class="widefat" />
 HTML;
 }
 
@@ -182,6 +193,7 @@ function jdlc_save_instrument_meta($post_id, $post){
   $instrument_params['facility'] = $_POST['jdlc_instrument_facility'];
   $instrument_params['year'] = $_POST['jdlc_instrument_year'];
   $instrument_params['title'] = $_POST['jdlc_instrument_title'];
+  $instrument_params['subtitle'] = $_POST['jdlc_instrument_subtitle'];
   $instrument_params['model'] = $_POST['jdlc_instrument_model'];
   $instrument_params['manufacturer'] = $_POST['jdlc_instrument_manufacturer'];
   $instrument_params['room'] = $_POST['jdlc_instrument_room'];
