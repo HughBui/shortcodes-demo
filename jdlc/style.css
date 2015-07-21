@@ -244,7 +244,7 @@ Text Domain: jdlc
 }
 /* line 111, ../src/css/_lightbox.sass */
 .lightbox .lightbox-content .right .image_select .feature {
-  height: 280px;
+  height: 500px;
   width: 100%;
   background-size: contain;
   background-position: center;

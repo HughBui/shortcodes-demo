@@ -15,6 +15,7 @@ function contact_highlight_shortcode($attr){
   $a['title'] = strtoupper($a['title']);
   $a['bio'] = wpautop($a['bio']);
   return <<<HTML
+  <div class="contact-list" style="border-top: none;">
     <div class="contact-highlight">
       <div class="contact-image-container-2" style="width: 145px;">
         <div class="contact-image" style="background-image: url('{$a['image']}');"></div>
@@ -27,6 +28,7 @@ function contact_highlight_shortcode($attr){
         <div class="contact-meta contact-desc">{$a['bio']}</div>
       </div>
       <!--<div class="contact-highlight-info"></div>-->
+    </div>
     </div>
 HTML;
 }

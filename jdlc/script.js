@@ -40,12 +40,13 @@ jdlcUpdateFeaturedImage = function(id, n) {
 jdlcLaunchLightbox = function(id) {
   var lbBackground, lbHeight, lbWidth, left, lightbox, top, vpHeight, vpScrollY, vpWidth;
   lightbox = document.getElementById(id);
+  var balloonMap = document.getElementById("balloonMap");
   vpHeight = window.innerHeight;
   vpScrollY = window.scrollY;
   vpWidth = window.innerWidth;
   lbHeight = lightbox.offsetHeight;
   lbWidth = lightbox.offsetWidth;
-  top = (vpHeight - lbHeight) / 2 + vpScrollY;
+  top = (vpHeight - lbHeight) / 2 + (balloonMap == null ? vpScrollY : 0);
   left = (vpWidth - lbWidth) / 2;
   lightbox.style.visibility = 'visible';
   lightbox.style.display = "inline-block";
