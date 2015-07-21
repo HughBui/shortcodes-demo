@@ -118,12 +118,21 @@ function homepage_posts_slideshow_shortcode($atts) {
   $posts = get_posts(array(
     'orderby' => 'date',
     'order' => 'DESC',
-    'category_name' => 'Featured',
+	'category_name' => 'Featured',
     'showposts' => 3));
-  if(count($posts) > 0){
-    $hasPost = true;
-  }
   $return_string .= "[slide]".multi_article_render_helper($posts)."[/slide]";
+	if(count($posts) > 0){
+		$hasPost = true;
+	}
+  $posts = get_posts(array(
+    'orderby' => 'date',
+    'order' => 'DESC',
+	'category_name' => 'Featured',
+    'showposts' => 3,
+    'offset' => 3));
+  if(count($posts) > 0){
+    $return_string .= "[slide]".multi_article_render_helper($posts)."[/slide]";
+  }
   $return_string .= "[/general_slider]";
   $return_string .= '<a class="all_news_button" href="'.get_permalink(get_page_by_path('research')).'">'.$a['buttonText'].'</a>';
   return $hasPost ? parse_shortcode_content($return_string) : "";
@@ -138,14 +147,17 @@ function in_honour_of_shortcode($atts, $content=null) {
   $a['name'] = strtoupper($a['name']);
   if (is_null($content) || $content == '') {
     $content = '
-      John de Laeter established the Physics Department at Curtin University in 1968, and developed a geochronology capability in WA in collaboration with the Geological Survey of Western Australia. Rising to the position of Deputy Vice-Chancellor of Research and Development, John spearheaded a tripartite proposal to commission a new SHRIMP ion microprobe at Curtin in 1994, and received funding in 1998 to establish a State Centre of Excellence Program in geochemistry and isotope science which was aptly named the John de Laeter Centre for Mass Spectrometry. He also collaborated with the WA Museum on studying the state meteorite collection, and co-authored the book “Meteorites: A journey through space and time”. John de Laeter’s legacy includes a substantive body of published works, a celestial body that carries his name (Minor Planet de Laeter 3893), and a devoted group of students and colleagues that carry on his tradition of collaborative research that shapes our collective understanding of the Earth and its place in the Universe.';
+      Established under the Western Australia Government\'s Centre of Excellence
+      and Innovation Program in 1999, the Centre for Isotope Research is named
+      in honour of one of Western Australia\'s pioneering leaders in the field
+      of isotope research and scientific education.';
   }
 
   return '
     <div class="in_honour_of">
       <div class="image" style="background-image: url('.$a['image'].');"></div>
       <div class="text">
-        <div id="jdlBio" class="name">'.$a['name'].'</div>
+        <div class="name">'.$a['name'].'</div>
         <div class="content">'.$content.'</div>
       </div>
     </div>';
