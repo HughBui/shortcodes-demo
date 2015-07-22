@@ -172,7 +172,7 @@ function publications_shortcode(){
     <div class="publications">
       <div>
         <div class="section-title">OUR PUBLICATIONS</div>
-        <div class="section-sub">John de Laeter Centre provides unique quantitative data on the way the Earth works, elucidating the changing environment we live in and the nature and origin of resources we depend on</div>
+        <div class="section-sub">These are publications generated in the Centre.</div>
       </div>
       <div>
         <div id="{$switcher_id}" class="date-range-switcher">{$switcher_items}</div>

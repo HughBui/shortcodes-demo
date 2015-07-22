@@ -19,14 +19,13 @@ function instrument_list_shortcode() {
         <div class="pic" style="background-image: url('.get_post_meta($post->ID, 'image', true).');"></div>
         <div class="name" style="margin-bottom: 20px;">
           <span style="font-size: 16px;">'.strtoupper(get_post_meta($post->ID, 'title', true)).'</span>
-          <span style="font-size: 12px;">'.strtoupper(get_post_meta($post->ID, 'subtitle', true)).'</span>
+          <span class="desc">'.get_post_meta($post->ID, 'subtitle', true).'</span>
         </div>
-        <div class="desc">'.get_post_meta($post->ID, 'description', true).'</div>
+        <!--<div class="desc">'.get_post_meta($post->ID, 'description', true).'</div>-->
       [/lightbox_launcher]
       [lightbox id="'.$id.'"]
         <div class="left" style="width: 330px">
           <h1>'.strtoupper(get_post_meta($post->ID, 'title', true)).'</h1>
-		  <h2>'.strtoupper(get_post_meta($post->ID, 'subtitle', true)).'</h2>
           <h2>'.strtoupper(get_post_meta($post->ID, 'facility', true)).'</h2>
           <div class="detail">Manufacturer: '.get_post_meta($post->ID, 'manufacturer', true).'</div>
           <div class="detail">Model: '.get_post_meta($post->ID, 'model', true).'</div>

@@ -20,7 +20,7 @@ function single_article_render_helper($post){
   }
   $posts_string .= '
     [lightbox_launcher id="'.$post_id.'" class="filtered-article '.$post_year.'"]
-      <div class="post" style="border-bottom: 20px solid white !important;">';
+      <div class="post">';
   if (has_post_thumbnail($post->ID)){
     $posts_string .= '<div class="featured-img">'.get_the_post_thumbnail($post->ID,'medium').'</div>';
   }

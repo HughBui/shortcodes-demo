@@ -1871,8 +1871,8 @@ a{
 }
 
 #burger-part{
-  display: none;
-  cursor: pointer;
+	display: none;
+	cursor: pointer;
   z-index: 101;
 }
 

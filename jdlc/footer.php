@@ -25,7 +25,7 @@
           <span class="social-links">
           <span class="social-linkedin"><a target="_blank" href="http://www.linkedin.com/groups?home=&gid=6689207"><img src="<?php echo get_static_uri('social-linkedin.png'); ?>"></img></a></span>
           <span class="social-twitter"><a target="_blank" href="https://twitter.com/JDLCentre"><img src="<?php echo get_static_uri('social-twitter.png'); ?>"></img></a></span>
-          <span class="social-youtube"><a target="_blank" href=""><img src="<?php echo get_static_uri('social-youtube.png'); ?>"></img></a></span>
+          <span class="social-youtube"><a target="_blank" href="https://www.youtube.com/channel/UCGHvrFPe7eq13DGZHZBF8TA"><img src="<?php echo get_static_uri('social-youtube.png'); ?>"></img></a></span>
         </div>
       </div>
     </div>
