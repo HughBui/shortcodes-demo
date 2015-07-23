@@ -320,6 +320,7 @@ html, body {
 .container.blog *{
 	padding: 5px !important;
 	margin: 0px auto !important;
+	max-width: 99.3%;
 }
 
 .container.grid{
@@ -449,12 +450,14 @@ html, body {
 }
 
 .container.blog .col.search div input#s{
-  height: 26px !important; 
+  float: left;
+  height: 26px !important;
   border: 2px solid #001530;
+  width: 75% !important;
 }
 
 .container.blog .col.search div input#searchsubmit{
-  float: right; 
+  float: right;
   height: 27px !important;
 }
 
