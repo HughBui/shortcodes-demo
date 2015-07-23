@@ -1,6 +1,7 @@
 <?php
 
 show_admin_bar(false);
+register_nav_menu( 'primary', __( 'Primary Menu', 'JMG' ) );
 
 function get_static_uri($resource){
 	return get_template_directory_uri() . '/static/' . $resource;
