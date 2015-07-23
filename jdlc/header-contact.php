@@ -9,7 +9,7 @@
 </div>
 
 <div class="header-content">
-  <a class="map-button" href="https://goo.gl/maps/un4jY">
+  <a class="map-button" href="https://goo.gl/maps/un4jY" target="_blank">
     <img class="map-icon" src="<?php echo get_static_uri('gmaps-icon.png') ?>">
     <span class="map-icon-label">VIEW MAP</span>
   </a>

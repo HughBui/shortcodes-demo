@@ -44,12 +44,12 @@ jdlcLaunchLightbox = function(id) {
   vpHeight = window.innerHeight;
   vpScrollY = window.scrollY;
   vpWidth = window.innerWidth;
+  lightbox.style.visibility = 'visible';
+  lightbox.style.display = "inline-block";
   lbHeight = lightbox.offsetHeight;
   lbWidth = lightbox.offsetWidth;
   top = (vpHeight - lbHeight) / 2 + (balloonMap == null ? vpScrollY : 0);
   left = (vpWidth - lbWidth) / 2;
-  lightbox.style.visibility = 'visible';
-  lightbox.style.display = "inline-block";
   lightbox.style.top = top + 'px';
   lightbox.style.left = left + 'px';
   lbBackground = document.getElementById('lightbox_background');

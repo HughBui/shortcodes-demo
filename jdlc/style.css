@@ -124,7 +124,7 @@ Text Domain: jdlc
 
 /* line 12, ../src/css/_lightbox.sass */
 .lightbox {
-  display: inline-block !important;
+  display: none;
   position: absolute;
   background-color: white;
   box-shadow: 0 0 2px 0 grey;
@@ -132,7 +132,7 @@ Text Domain: jdlc
   max-width: 1000px;
   max-height: 800px;
   opacity: 1;
-  visibility: hidden;
+  /*visibility: visible;*/
   z-index: 100;
 }
 /* line 24, ../src/css/_lightbox.sass */
