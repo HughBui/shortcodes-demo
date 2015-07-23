@@ -55,7 +55,7 @@ endif;
 </div>
 <div class="container content post previous">
 	<div class="row">
-		<div class="col col-span-1 middle-left info">
+		<div class="col col-span-1 middle-left info" style="height: 25px !important;">
 			<p>< <?php previous_post_link('%link', 'Previous', FALSE); ?></p>
 		</div>
 	</div>
