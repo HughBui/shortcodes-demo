@@ -58,4 +58,7 @@ window.onresize = function(event) {
 window.onload = function(event) {
   resize();
   toggle(0); 
+  if(document.getElementsByClassName("blog").length != 0){
+	document.getElementById("menuItem-blog").className = "selected";
+  }
 };
