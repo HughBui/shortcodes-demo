@@ -21,11 +21,11 @@ function contact_highlight_shortcode($attr){
         <div class="contact-image" style="background-image: url('{$a['image']}');"></div>
       </div>
       <div class="contact-bio-container">
-        <div class="contact-meta contact-name">{$a['name']}</div>
-        <div class="contact-title" style="margin-bottom: 15px;">{$a['title']}</div>
+        <div class="contact-meta contact-name" style="color: #343434">{$a['name']}</div>
+        <div class="contact-title" style="margin-bottom: 15px; color: #343434; font-size: 18px;">{$a['title']}</div>
         <span class="contact-meta contact-email"><a href="mailto: {$a['email']}">Email: {$a['email']}</a></span>
         <span class="contact-meta contact-phone" style="margin-left: 15px; color: #747474;">Ph: {$a['phone']}</span><br/><br/>
-        <div class="contact-meta contact-desc">{$a['bio']}</div>
+        <div class="contact-meta contact-desc" style="font-size: 14px; line-height: 19px; color: #858585;">{$a['bio']}</div>
       </div>
       <!--<div class="contact-highlight-info"></div>-->
     </div>
