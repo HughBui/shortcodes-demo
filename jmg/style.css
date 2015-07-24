@@ -497,6 +497,11 @@ html, body {
   max-width: 1400px;
   z-index: 10;
 }
+
+.sticky.scroll{
+	background-color: white;
+}
+
 /* line 169, ../src/css/style.sass */
 .sticky * {
   padding: 0 !important;
@@ -751,26 +756,40 @@ a.btn {
   height: 76px;
   text-align: center;
   line-height: 76px;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', serif;
+  font-weight: bold;
+  font-size: 16px;
   text-decoration: none;
+  color: white;
+}
+
+.header.scroll li a {
+	color: grey;
 }
 /* line 38, ../src/css/_menu.sass */
 .header li a{
 	border-top: 4px solid rgba(0,0,0,0);
 }
 
-.header li.selected a,
-.header li:hover a {
-  border-top: 4px solid #5d5b5c;
+@media(min-width:751px) {
+	.header li.selected a,
+	.header li:hover a {
+	  border-top: 4px solid #5d5b5c;
+	}
 }
 /* line 41, ../src/css/_menu.sass */
 .header li:hover ul a {
   background-color: rgba(255, 255, 255, 0.5);
-  color: #2f3036;
   height: 40px;
   line-height: 40px;
   border: none;
 }
+
+/* line 122, ../src/css/_menu.sass */
+.header li ul li:hover a {
+	background-color: white;
+}
+
 /* line 49, ../src/css/_menu.sass */
 .header li ul {
   display: none;
@@ -790,7 +809,6 @@ a.btn {
 .header .show-menu {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: #fff;
   text-align: center;
   display: none;
   position: absolute;
@@ -864,22 +882,29 @@ input[type=checkbox]:checked ~ #menu {
     line-height: 40px;
     background-color: rgba(255, 255, 255, 0.9);
   }
+  
+  .header li.selected a,
+  .header li:hover a {
+	  background-color: white;
+  }
+  
   /* line 115, ../src/css/_menu.sass */
   .header li a:hover {
-    background-color: white;
+	background-color: white;
   }
   /* line 119, ../src/css/_menu.sass */
   .header li:hover a {
-    background-color: white;
-  }
-  /* line 122, ../src/css/_menu.sass */
-  .header li:hover ul a {
-    background-color: white;
+	background-color: white;
   }
   /* line 125, ../src/css/_menu.sass */
   .header li ul li a {
     text-align: center;
   }
+  
+  .header li:hover ul a {
+	background-color: rgba(255, 255, 255, 0.9);
+  }
+  
   /* line 128, ../src/css/_menu.sass */
   .header .show-menu {
     display: block;
@@ -903,10 +928,6 @@ input[type=checkbox]:checked ~ #menu {
 
 /* line 141, ../src/css/_menu.sass */
 @media(min-width:730px) {
-	.hidden{
-		border-top: 4px solid #5d5b5c;
-	}
-
 	.hidden li a {
 		padding-left: 20px !important;
 	}
