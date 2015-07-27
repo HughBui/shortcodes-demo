@@ -1,7 +1,7 @@
 <?php
 if(count($bgImages) == 0){
 	print_r('
-		<div class="container content '.($a["post"] == "true" ? "post" : "").($a["grid"] == "true" ? "grid" : "").' '.($a["dark"] == "true" ? "dark" : "").'">
+		<div class="container content '.($a["post"] == "true" ? "post" : "").($a["grid"] == "true" ? "grid" : "").' '.($a["dark"] == "true" ? "dark" : "").'" '.($a["style"] == "" ? "" : "style=\"".$a["style"] ."\"").'>
 			<div class="row '.($a["narrow"] == "true" ? "narrow" : "").'">
 				'.do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)).'
 			</div>
@@ -22,9 +22,9 @@ if(count($bgImages) == 0){
 	}
 	$carousel .= count($bgImages) == 1 ? '' : '</span>';
 	print_r('
-		<div id="carousel" class="container content '.($a["header"] == "true" ? "header" : "").' bgDiv" style="background: url(\''.$bgImages[0].'\') no-repeat;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-position: center center;">
+		<div id="carousel" class="container content '.($a["header"] == "true" ? "header" : "").' bgDiv" style="background: url(\''.$bgImages[0].'\') no-repeat;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-position: center center; '.($a["parallax"] == "true" ? "background-attachment: fixed;" : "").'">
 			<div class="row '.($a["narrow"] == "true" ? "narrow" : "").'">
-				'.substr(do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)),0,-11).$carousel.'
+				'.substr(do_shortcode(str_replace(array("<br />", "<p>", "</p>"), "", $content)),0,-12).$carousel.'
 				</div>
 			</div>
 			'.($a["arrow"] == "true" ? "<div class=\"arrow\"></div>" : "").'

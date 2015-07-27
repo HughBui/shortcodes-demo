@@ -113,7 +113,9 @@ add_shortcode('columns', function($atts, $content) {
 		'arrow' => 'false',
 		'desaturate' => 'false',
 		'post' => 'false',
-		'grid' => 'false'
+		'grid' => 'false',
+                'parallax' => 'false',
+                'style' => ''
 		), $atts );
 
 	$bgImages = $a["bg"] != '' ? explode(";",$a["bg"]) : [];
@@ -130,7 +132,8 @@ add_shortcode('column', function($atts, $content) {
 		'bg' => '',
 		'span' => '1',
 		'collapsible' => 'false',
-		'align' => ''
+		'align' => '',
+                'style' => ''
 		), $atts );
 
 	$colImg = $a["bg"] != '' ? get_static_uri($a["bg"]) : '';

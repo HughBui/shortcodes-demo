@@ -228,14 +228,14 @@ html, body {
   margin: 0 auto;
   padding: 0;
   height: 100%;
-  max-width: 1400px;
+  width: 100%;
   background: #e5e5e5;
 }
 
 /* line 54, ../src/css/style.sass */
 .container h1, h2, h3 {
   color: #003b81;
-  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+  font-family: 'Roboto', serif;
   font-weight: lighter;
   width: 100%;
   text-align: center;
@@ -263,6 +263,7 @@ html, body {
 .container {
   width: 100%;
   background: #fff;
+  padding: 0px !important;
 }
 .header.bgDiv .col{
   margin: 150px auto;
@@ -271,6 +272,7 @@ html, body {
 .container.header h1 {
   color: #fff;
   font-size: 55px;
+  font-family: 'Roboto', serif;
 }
 /* line 96, ../src/css/style.sass */
 .container.header h2 {
@@ -474,8 +476,12 @@ html, body {
   position: absolute;
   left: 50%;
   margin-left: -25px;
-  margin-top: 25px;
+  margin-top: -25px;
   transform: rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  -ms-transform: rotate(45deg);
 }
 
 /* line 156, ../src/css/style.sass */
@@ -494,7 +500,7 @@ html, body {
   top: 0;
   background-color: rgba(255, 255, 255, 0.5);
   height: 80px;
-  max-width: 1400px;
+  width: 100%;
   z-index: 10;
 }
 
