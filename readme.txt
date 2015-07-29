@@ -1,4 +1,3 @@
-
 <!-- saved from url=(0078)http://fbpage.digitalpour.com/?companyID=5568f31c5e00370f38dbb9e1&locationID=1 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="./fbpage.digitalpour.com_files/css" rel="stylesheet" type="text/css">
@@ -14,6 +13,8 @@
 		left : 0px;	
 		top: 50px;
 		position: absolute;
+		padding: 0;
+		border: 1px solid red;
 	}
 
 	li {
@@ -50,7 +51,6 @@
 		margin:0px;
 		padding: 0px;
 		width:100%;
-		min-width: 320px;
 	}
 
 	.tapInfoWrapper {
@@ -169,13 +169,13 @@
 	</div>
 	<ul>
 		<li>
-		<div class="lineItem">
+		<div class="lineItem" style="border:1px solid red;">
 			<table>
 				<tbody><tr>
-					<td class="tapInfoWrapper">
+					<td class="tapInfoWrapper" style="border:1px solid red;">
 					<div>1</div>	
 					</td>
-					<td>								
+					<td style="border:1px solid red;">								
 						<div class="beverageInfo" name="wineLayout" style="display:table-cell">
 							<div class="producerName">Fullerton Five Faces</div> 
 							<div class="beverageName">Pinot Noir</div>
@@ -185,13 +185,11 @@
 							<div class="abv" style="visibility:inherit">13%&nbsp;&nbsp;</div>
 						</div>			
 				    </td>
-					<td class="kegLevelWrapper" style="display:table-cell">
+					<td class="kegLevelWrapper" style="display:table-cell; border:1px solid red; width: 100px; vertical-align: middle;">
 						<img src="./fbpage.digitalpour.com_files/empty_keg_bottom.png" style="position:absolute;bottom:0px;width:40px;height=55px;">						
 						<img src="./fbpage.digitalpour.com_files/empty_keg_front.png" style="position:absolute;bottom:0px;width:40px;height=55px;opacity:0.5;z-index:5;">
 						<div class="kegLevel" style="background:#4BFF28;height:31px;"></div>
-					</td>
-					<td class="justTappedWrapper">
-						<div class="justTapped" style="opacity:0">Just Tapped</div>
+						<div class="justTapped" style="opacity:1; float: right;">Just Tapped</div>
 					</td>
 				</tr>
 			</tbody></table>
