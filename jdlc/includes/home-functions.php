@@ -29,14 +29,22 @@ add_shortcode('fields-of-research', 'fields_of_research_shortcode');
 /* client listing + world map */
 
 function clientmap_shortcode(){
-  $clients = clientbox_shortcode_helper('logo-shell.jpg')
+  $clients =
+    clientbox_shortcode_helper('logo-anglo.jpg')
+    . clientbox_shortcode_helper('logo-asi.jpg')
+    . clientbox_shortcode_helper('logo-bhp.jpg')
+    . clientbox_shortcode_helper('logo-chevron.jpg')
+    . clientbox_shortcode_helper('logo-debeers2.jpg')
     . clientbox_shortcode_helper('logo-iluka.jpg')
     . clientbox_shortcode_helper('logo-independence.jpg')
-    . clientbox_shortcode_helper('logo-debeers.jpg')
+    . clientbox_shortcode_helper('logo-reflex.jpg')
+    . clientbox_shortcode_helper('logo-rio.jpg')
     . clientbox_shortcode_helper('logo-santos.jpg')
-    . clientbox_shortcode_helper('logo-anglo.jpg')
-    . clientbox_shortcode_helper('logo-chevron.jpg')
-    . clientbox_shortcode_helper('logo-rio.jpg');
+    . clientbox_shortcode_helper('logo-shell.jpg')
+    . clientbox_shortcode_helper('logo-ammrf.jpg')
+    . clientbox_shortcode_helper('logo-AuScope.jpg')
+    . clientbox_shortcode_helper('logo-CET.jpg')
+    . clientbox_shortcode_helper('logo-TIGeR.jpg');
   return collaborate_map_shortcode($clients);
 }
 
